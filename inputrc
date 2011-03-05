@@ -1,0 +1,3 @@
+# archwiki: use up and down to autcomplete commands from history
+"\e[A":history-search-backward
+"\e[B":history-search-forward
