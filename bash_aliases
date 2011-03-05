@@ -1,3 +1,6 @@
+# archlinux: color ls by default
+alias ls='ls --color=auto'
+
 # make bash navigation easier
 alias ..="cd .."
 
