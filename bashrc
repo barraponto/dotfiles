@@ -14,6 +14,9 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# ubuntu: check window size after each command
+shopt -s checkwinsize
+
 # archwiki: prevent repeated commands on history
 export HISTCONTROL=ignoredups
 
