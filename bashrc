@@ -24,3 +24,6 @@ eval `keychain --eval --agents ssh id_rsa`
 
 # rvm : loads RVM into a shell session.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+
+# barraponto: set vim as editor
+export EDITOR=vim
