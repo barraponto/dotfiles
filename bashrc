@@ -19,11 +19,14 @@ shopt -s checkwinsize
 # archwiki: prevent repeated commands on history
 export HISTCONTROL=ignoredups
 
+# ubuntuforums: leave some commands out of history log
+export HISTIGNORE="&:??:[ ]*:clear:exit:logout"
+
+# barraponto: set vim as editor
+export EDITOR=vim
+
 # archwiki: run keygen to automatically add ssh
 eval `keychain --eval --agents ssh id_rsa`
 
 # rvm : loads RVM into a shell session.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
-
-# barraponto: set vim as editor
-export EDITOR=vim
