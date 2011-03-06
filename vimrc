@@ -8,6 +8,8 @@ call pathogen#helptags()
 " some regular options
 set number        " show line numbers
 set ruler         " show line,column
+set wrap          " visually wrap lines
+set linebreak     " wrap only on word boundaries
 set hidden        " allows hiding buffers with changes
 set expandtab     " turn tabs into spaces
 set autoindent    " automatic indenting
@@ -16,6 +18,13 @@ set shiftwidth=2  " indent size on autoindent or >>
 set tabstop=2     " tab display size 
 set softtabstop=2 " tab size in insert mode (not indent)
 
+" janus: search options
+set hlsearch      " highlights search results
+set incsearch     " incremental search results
+set ignorecase    " ignores case when searching 
+set smartcase     " only ignores cases on smallcaps
+
+" enable syntax for the win
 syntax on         " enable syntax highlighting
 
 " load filetype indents
