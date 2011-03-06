@@ -5,6 +5,9 @@ set nocompatible
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+" janus: allow backspacing over everything in insert mode
+set backspace=indent,eol,start 
+
 " barraponto: some regular options
 set number        " show line numbers
 set ruler         " show line,column
@@ -17,6 +20,7 @@ set smartindent   " smart indenting
 set shiftwidth=2  " indent size on autoindent or >>
 set tabstop=2     " tab display size 
 set softtabstop=2 " tab size in insert mode (not indent)
+
 
 " janus: search options
 set hlsearch      " highlights search results
