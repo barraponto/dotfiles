@@ -5,7 +5,7 @@ set nocompatible
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-" some regular options
+" barraponto: some regular options
 set number        " show line numbers
 set ruler         " show line,column
 set wrap          " visually wrap lines
@@ -27,7 +27,7 @@ set smartcase     " only ignores cases on smallcaps
 " enable syntax for the win
 syntax on         " enable syntax highlighting
 
-" load filetype indents
+" panaggio: load filetype indents
 if has("autocmd")
   filetype plugin indent on
 endif
