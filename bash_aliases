@@ -11,3 +11,6 @@ alias gb='git branch'
 alias gc='git commit'
 alias gd='git diff'
 alias go='git checkout'
+
+# videodownloader (for vimeo videos)
+alias vimeo-dl='videodownloader -p Vimeo'
