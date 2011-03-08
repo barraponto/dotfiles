@@ -34,4 +34,10 @@ syntax on         " enable syntax highlighting
 " panaggio: load filetype indents
 if has("autocmd")
   filetype plugin indent on
+
+  " archlinux: jump to last known cursor position
+  autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
 endif
