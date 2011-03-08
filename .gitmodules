@@ -49,3 +49,15 @@
 [submodule "vim/bundle/markdown"]
 	path = vim/bundle/markdown
 	url = git://github.com/plasticboy/vim-markdown.git
+[submodule "vim/bundle/php"]
+	path = vim/bundle/php
+	url = git://github.com/vim-scripts/php.vim--Garvin.git
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
+	url = git://github.com/scrooloose/syntastic.git
+[submodule "vim/bundle/gist"]
+	path = vim/bundle/gist
+	url = git://github.com/vim-scripts/Gist.vim.git
+[submodule "vim/bundle/jslint"]
+	path = vim/bundle/jslint
+	url = git://github.com/hallettj/jslint.vim.git
