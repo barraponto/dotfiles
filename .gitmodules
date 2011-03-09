@@ -61,3 +61,9 @@
 [submodule "vim/bundle/jslint"]
 	path = vim/bundle/jslint
 	url = git://github.com/hallettj/jslint.vim.git
+[submodule "vim/bundle/lazysnipmate"]
+	path = vim/bundle/lazysnipmate
+	url = git://github.com/vim-scripts/lazysnipmate.git
+[submodule "vim/bundle/mw-utils"]
+	path = vim/bundle/mw-utils
+	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
