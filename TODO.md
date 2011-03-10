@@ -4,4 +4,3 @@
 * bash prompt
   * show git branch
 * update vim-bundles
-* dependencies
