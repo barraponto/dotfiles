@@ -49,6 +49,6 @@ if has("autocmd")
     \ endif
 endif
 
-" enable sql and html inside php
+" php: enable sql and html inside php
 let php_sql_query = 1
 let php_htmlInStrings = 1
