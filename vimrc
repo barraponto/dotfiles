@@ -52,3 +52,10 @@ endif
 " php: enable sql and html inside php
 let php_sql_query = 1
 let php_htmlInStrings = 1
+
+" syntastic: place warnings on status line
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_enable_signs=1 " mark the line with errors
+let g:syntastic_auto_jump=1    " jump to the erros on file save (or file load)
