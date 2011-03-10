@@ -20,6 +20,7 @@ set smartindent   " smart indenting
 set shiftwidth=2  " indent size on autoindent or >>
 set tabstop=2     " tab display size 
 set softtabstop=2 " tab size in insert mode (not indent)
+set mouse=a       " enable mouse usage 
 
 
 " janus: search options
