@@ -5,3 +5,4 @@
 * bash prompt
   * show git branch
 * update vim-bundles
+* skip .md files on install.rb
