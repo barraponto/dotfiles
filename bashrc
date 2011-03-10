@@ -37,3 +37,6 @@ PATH=$PATH:$HOME/local/bin
 # groucho: drush shortcuts
 function drush-dlen () { drush dl $1 && drush en $1 --yes; }
 function drush-undis () { drush dis $1 --yes && drush pm-uninstall $1 --yes; }
+
+# commandlinefu: watch from youtube in mplayer
+function yt () { mplayer -fs -quiet $(youtube-dl -g "$1"); }
