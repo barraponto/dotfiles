@@ -1,3 +1,4 @@
+* check for autocompletion on archlinux
 * vim extensions:
   * matchit
 * python pep 8
