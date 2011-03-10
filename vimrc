@@ -49,6 +49,10 @@ if has("autocmd")
     \ endif
 endif
 
+" use ctrl+arrow to navigate the tabs
+map <C-Left> :tabprevious<CR>
+map <C-Right> :tabnext<CR>
+
 " php: enable sql and html inside php
 let php_sql_query = 1
 let php_htmlInStrings = 1
