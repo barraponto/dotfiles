@@ -26,7 +26,7 @@ export HISTIGNORE="&:??:[ ]*:clear:exit:logout"
 export EDITOR=vim
 
 # archwiki: run keygen to automatically add ssh
-eval `keychain --eval --agents ssh id_rsa`
+eval `keychain --eval --agents ssh id_rsa --quiet`
 
 # rvm : loads RVM into a shell session.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
