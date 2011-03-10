@@ -22,6 +22,8 @@ set tabstop=2     " tab display size
 set softtabstop=2 " tab size in insert mode (not indent)
 set mouse=a       " enable mouse usage 
 
+" debian: set lower priority suffixes
+set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 
 " janus: search options
 set hlsearch      " highlights search results
