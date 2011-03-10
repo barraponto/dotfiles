@@ -33,3 +33,7 @@ eval `keychain --eval --agents ssh id_rsa`
 
 # groucho: ~/local/bin in path
 PATH=$PATH:$HOME/local/bin 
+
+# groucho: drush shortcuts
+function drush-dlen () { drush dl $1 && drush en $1 --yes; }
+function drush-undis () { drush dis $1 --yes && drush pm-uninstall $1 --yes; }
