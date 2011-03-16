@@ -3,3 +3,5 @@ username = Capi Etheriel <barraponto@gmail.com>
 
 [extensions]
 color = 
+hgext.bookmarks =
+hggit = ~/local/opt/hg-git/hggit

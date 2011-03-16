@@ -9,15 +9,18 @@ provided, delete it and run the installer again.
 DEPENDENCIES
 ============
 
-bashrc depends on:
-* keychain package (not default on ubuntu or archlinux)
-* rvm ( not a package by definition, see RVM section)
-* ssh-askpass (not default on ubuntu or archlinux)
-* drush (optional, but related functions will taint the namespace)
-* youtube-dl (optional, but related functions will taint the namespace)
+bashrc depends on:  
+* keychain package (not default on ubuntu or archlinux)  
+* rvm ( not a package by definition, see RVM section)  
+* ssh-askpass (not default on ubuntu or archlinux)  
+* drush (optional, but related functions will taint the namespace)  
+* youtube-dl (optional, but related functions will taint the namespace)  
 
-bash_aliases depends on:
+bash_aliases depends on:  
 * videodownloader (optional)
+
+hgrc depends on:  
+* hg-git (optional, you must adjust hgrc to your hg-git path anyway)
 
 RVM
 ===
