@@ -14,3 +14,6 @@ alias go='git checkout'
 
 # videodownloader (for vimeo videos)
 alias vimeo-dl='videodownloader -p Vimeo'
+
+# vim shortcut
+alias v='vim -p'
