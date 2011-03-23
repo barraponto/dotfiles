@@ -16,3 +16,5 @@
   dump = cat-file -p
 [url "http://git.drupal.org/project/"]
   insteadOf = drupal://
+[receive]
+	denyNonFastForwards = true

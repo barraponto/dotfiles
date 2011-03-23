@@ -26,6 +26,8 @@ set gdefault      " substitutes on the whole line by default (no trailing /g)
 set showmode      " shows what mode the user is in
 set showcmd       " displays partial commands as you type
 
+colorscheme desert " nice looking colorscheme for both dark and light backgrounds
+
 " debian: set lower priority suffixes
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 
