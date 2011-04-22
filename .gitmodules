@@ -73,3 +73,6 @@
 [submodule "vim/bundle/drupal-snippets"]
 	path = vim/bundle/drupal-snippets
 	url = git://github.com/barraponto/Drupal-Snippets-for-Vim.git
+[submodule "drush/aliases"]
+	path = drush/aliases
+	url = git://github.com/nuvoleweb/drush_alias.git

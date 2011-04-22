@@ -44,3 +44,9 @@ function yt () { mplayer -fs -quiet $(youtube-dl -g "$1"); }
 if [ -f /etc/debian_version ]; then
  . /etc/bash_completion 
 fi
+
+# nuvoleweb: load aliases from .drush_aliases
+if [ -f ~/.drush_aliases ]; then
+    . ~/.drush_aliases
+fi
+
