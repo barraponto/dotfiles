@@ -3,9 +3,6 @@
 [user]
   name = Capi Etheriel
   email = barraponto@gmail.com
-[core]
-  autocrlf = input
-  safecrlf = true
 [alias]
   co = checkout
   ci = commit
