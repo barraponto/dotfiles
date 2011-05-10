@@ -76,3 +76,9 @@
 [submodule "drush/aliases"]
 	path = drush/aliases
 	url = git://github.com/nuvoleweb/drush_alias.git
+[submodule "vim-colors-solarized"]
+	path = vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "vim/bundle/solarized"]
+	path = vim/bundle/solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
