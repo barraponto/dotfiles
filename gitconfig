@@ -15,3 +15,5 @@
   insteadOf = drupal://
 [receive]
 	denyNonFastForwards = true
+[core]
+  excludesfile = ~/.gitignore
