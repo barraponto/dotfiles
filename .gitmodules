@@ -58,9 +58,6 @@
 [submodule "vim/bundle/gist"]
 	path = vim/bundle/gist
 	url = git://github.com/vim-scripts/Gist.vim.git
-[submodule "vim/bundle/jslint"]
-	path = vim/bundle/jslint
-	url = git://github.com/hallettj/jslint.vim.git
 [submodule "vim/bundle/mw-utils"]
 	path = vim/bundle/mw-utils
 	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
@@ -70,9 +67,6 @@
 [submodule "vim/bundle/snipmate"]
 	path = vim/bundle/snipmate
 	url = git://github.com/garbas/vim-snipmate.git
-[submodule "vim/bundle/drupal-snippets"]
-	path = vim/bundle/drupal-snippets
-	url = git://github.com/barraponto/Drupal-Snippets-for-Vim.git
 [submodule "drush/aliases"]
 	path = drush/aliases
 	url = git://github.com/nuvoleweb/drush_alias.git
@@ -82,3 +76,6 @@
 [submodule "vim/bundle/solarized"]
 	path = vim/bundle/solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "vim/bundle/pythoncomplete"]
+	path = vim/bundle/pythoncomplete
+	url = git://github.com/vim-scripts/pythoncomplete.git
