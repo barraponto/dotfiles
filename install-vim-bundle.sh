@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+git submodule add git://github.com/nuvoleweb/drush_alias.git drush/aliases
 git submodule add git://github.com/tpope/vim-pathogen.git vim/bundle/pathogen 
 git submodule add git://github.com/tpope/vim-rails.git vim/bundle/rails 
 git submodule add git://github.com/tpope/vim-fugitive.git vim/bundle/fugitive 
@@ -17,3 +18,10 @@ git submodule add git://github.com/vim-scripts/AutoClose.git vim/bundle/autoclos
 git submodule add git://github.com/vim-scripts/jQuery.git vim/bundle/jquery 
 git submodule add git://github.com/scrooloose/nerdtree.git vim/bundle/nerdtree 
 git submodule add git://github.com/plasticboy/vim-markdown.git vim/bundle/markdown 
+git submodule add git://github.com/vim-scripts/Gist.vim.git vim/bundle/gist
+git submodule add git://github.com/MarcWeber/vim-addon-mw-utils.git bim/bundle/mw-utils
+git submodule add git://github.com/vim-scripts/php.vim--Garvin.git vim/bundle/php
+git submodule add git://github.com/garbas/vim-snipmate.git vim/bundle/snipmate
+git submodule add git://github.com/scrooloose/syntastic.git vim/bundle/syntastic
+git submodule add git://github.com/tomtom/tlib_vim.git vim/bundle/tlib
+git submodule add git://github.com/altercation/vim-colors-solarized.git vim/bundle/solarized
