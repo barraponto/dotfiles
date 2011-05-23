@@ -62,6 +62,12 @@ if has("autocmd")
     autocmd BufRead,BufNewFile *.test set filetype=php
   augroup END
 
+  " mrelendig: Python stuff
+  autocmd FileType python let python_highlight_all = 1
+  autocmd FileType python let python_slow_sync = 1
+  autocmd FileType python set expandtab shiftwidth=4 softtabstop=4 
+  autocmd FileType python set completeopt=preview"
+
 endif
 
 " use ctrl+arrow to navigate the tabs
