@@ -26,6 +26,8 @@ set gdefault      " substitutes on the whole line by default (no trailing /g)
 set showmode      " shows what mode the user is in
 set showcmd       " displays partial commands as you type
 
+set background=dark " making the background darker for ubuntu
+set t_Co=16 " this fixes the background for ubuntu
 colorscheme solarized " nice looking colorscheme for both dark and light backgrounds
 
 " debian: set lower priority suffixes
