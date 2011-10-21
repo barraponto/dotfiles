@@ -50,3 +50,5 @@ if [ -f ~/.drush_aliases ]; then
     . ~/.drush_aliases
 fi
 
+# virtualenvwrapper: make virtualenvs work nice
+source ~/.local/bin/virtualenvwrapper.sh
