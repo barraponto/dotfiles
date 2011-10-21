@@ -31,8 +31,8 @@ eval `keychain --eval --agents ssh id_rsa --quiet`
 # rvm : loads RVM into a shell session.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
-# groucho: ~/local/bin in path
-PATH=$HOME/local/bin:$PATH
+# groucho: ~/.local/bin in path
+PATH=$HOME/.local/bin:$PATH
 
 # groucho: drush shortcuts
 function drush-dlen () { drush dl $1 && drush en $1 --yes; }
