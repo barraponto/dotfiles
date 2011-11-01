@@ -4,4 +4,4 @@ username = Capi Etheriel <barraponto@gmail.com>
 [extensions]
 color = 
 hgext.bookmarks =
-hggit = ~/local/opt/hg-git/hggit
+hggit = ~/.local/lib/python2.7/site-packages/hggit/
