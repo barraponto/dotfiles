@@ -52,3 +52,6 @@ fi
 
 # virtualenvwrapper: make virtualenvs work nice
 source ~/.local/bin/virtualenvwrapper.sh
+
+#perlbrew: source the perlbrew
+source ~/perl5/perlbrew/etc/bashrc
