@@ -10,7 +10,7 @@ set backspace=indent,eol,start
 
 " barraponto: some regular options
 set number        " show line numbers
-set ruler         " show line,column
+set laststatus=2  " show statusline
 set wrap          " visually wrap lines
 set linebreak     " wrap only on word boundaries
 set hidden        " allows hiding buffers with changes
@@ -26,7 +26,7 @@ set gdefault      " substitutes on the whole line by default (no trailing /g)
 set showmode      " shows what mode the user is in
 set showcmd       " displays partial commands as you type
 
-set background=dark " making the background darker for ubuntu
+set background=light " making the background lighter for ubuntu
 set t_Co=16 " this fixes the background for ubuntu
 colorscheme solarized " nice looking colorscheme for both dark and light backgrounds
 
@@ -38,6 +38,13 @@ set hlsearch      " highlights search results
 set incsearch     " incremental search results
 set ignorecase    " ignores case when searching 
 set smartcase     " only ignores cases on smallcaps
+
+" amix.dk: turn off backup, turn on persistent undo
+set nobackup
+set nowb
+set noswapfile
+set undodir=~/.vim/undodir
+set undofile
 
 " enable syntax for the win
 syntax on         " enable syntax highlighting
@@ -80,9 +87,23 @@ map <C-Right> :tabnext<CR>
 let php_sql_query = 1
 let php_htmlInStrings = 1
 
+" syntastic: syntastic options
+let g:syntastic_auto_jump=1    " jump to the erros on file save (or file load)
+let g:syntastic_auto_loc_list=1 " automatically open and close error windows
+
+" gotravings: jamessan statusbar (cherrypicked)
+set statusline+=[%{strlen(&ft)?&ft:'none'},  " filetype
+set statusline+=%{strlen(&fenc)?&fenc:&enc}] " encoding
+
+" eethann: fugitive status
+set statusline+=%{fugitive#statusline()} " current git repo status
+
 " syntastic: place warnings on status line
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:syntastic_enable_signs=1 " mark the line with errors
-let g:syntastic_auto_jump=1    " jump to the erros on file save (or file load)
+
+" gotravings: siiph statusbar (cherrypicked)
+set statusline+=%=%f\                       " file name"
+set statusline+=%=%10((%l,%c)%)\            " line and column
+set statusline+=%=%P                        " percentage of file
