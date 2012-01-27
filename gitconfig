@@ -13,6 +13,14 @@
   dump = cat-file -p
 [url "http://git.drupal.org/project/"]
   insteadOf = drupal://
+[url "http://git.trellon.org/"]
+  insteadOf = trellon://
+[url "git://github.com/"]
+  insteadOf = github://
+[url "git://github.com/barraponto/"]
+  insteadOf = barraponto://
+[url "git@github.com:barraponto/"]
+  pushinsteadOf = barraponto://
 [receive]
 	denyNonFastForwards = true
 [core]
