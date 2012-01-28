@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 # PS1='[\u@\h \W]\$ '
-PS1='\[\e[0;31m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]$(__git_ps1 "(%s)") $ \[\e[m\]\[\e[0;32m\] '
+PS1='\[\e[0;31m\]\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]$(__git_ps1 "(%s)") $ \[\e[m\]\[\e[0;32m\] '
 
 # ubuntu: load aliases from .bash_aliases
 if [ -f ~/.bash_aliases ]; then
