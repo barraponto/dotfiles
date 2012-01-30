@@ -17,3 +17,6 @@ alias vimeo-dl='videodownloader -p Vimeo'
 
 # vim shortcut
 alias v='vim -p'
+
+alias setdark='~/.local/opt/gnome-terminal-colors-solarized/set_dark.sh'
+alias setlight='~/.local/opt/gnome-terminal-colors-solarized/set_light.sh'
