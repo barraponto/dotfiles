@@ -53,5 +53,8 @@ fi
 # virtualenvwrapper: make virtualenvs work nice
 source ~/.local/bin/virtualenvwrapper.sh
 
+# pip: create virtualenvs in workon home
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+
 #perlbrew: source the perlbrew
 source ~/perl5/perlbrew/etc/bashrc
