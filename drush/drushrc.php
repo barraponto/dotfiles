@@ -82,7 +82,7 @@ $options['shell-aliases']['wipe'] = 'cache-clear all';
 $options['shell-aliases']['offline'] = 'variable-set -y --always-set maintenance_mode 1';
 $options['shell-aliases']['online'] = 'variable-delete -y --exact maintenance_mode';
 // Add a 'pm-clone' to simplify (cached) git cloning from drupal.org.
-# $options['shell-aliases']['pm-clone'] = 'pm-download --gitusername=YOURUSERNAME --package-handler=git_drupalorg --cache';
+$options['shell-aliases']['clone'] = 'pm-download --package-handler=git_drupalorg --cache';
 
 // Load a drushrc.php configuration file from the current working directory.
 # $options['config'][] = '.';
@@ -232,6 +232,10 @@ $options['structure-tables']['common'] = array('cache', 'cache_filter', 'cache_m
  */
 # $command_specific['rsync'] = array('verbose' => TRUE);
 # $command_specific['dl'] = array('cvscredentials' => 'user:pass');
+# $command_specific['dl'] = array(
+#   'package-handler' => 'git_drupalorg',
+#   'cache' => TRUE,
+# );
 
 // Specify additional directories to search for scripts
 // Separate by : (Unix-based systems) or ; (Windows).
