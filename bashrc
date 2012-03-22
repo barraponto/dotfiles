@@ -28,9 +28,6 @@ export EDITOR=vim
 # archwiki: run keygen to automatically add ssh
 eval `keychain --eval --agents ssh id_rsa --quiet`
 
-# rvm : loads RVM into a shell session.
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
-
 # groucho: ~/.local/bin in path
 PATH=$HOME/.local/bin:$PATH
 
@@ -58,3 +55,5 @@ export PIP_VIRTUALENV_BASE=$WORKON_HOME
 
 #perlbrew: source the perlbrew
 source ~/perl5/perlbrew/etc/bashrc
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
