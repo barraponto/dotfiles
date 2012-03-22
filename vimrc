@@ -1,6 +1,11 @@
 " master option for vim features
 set nocompatible
 
+" fix screen+vim madness
+if match($TERM, "screen")!=-1
+  set term=xterm
+endif
+
 " panaggio: enable pathogen features
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
