@@ -79,3 +79,9 @@
 [submodule "vim/bundle/pythoncomplete"]
 	path = vim/bundle/pythoncomplete
 	url = git://github.com/vim-scripts/pythoncomplete.git
+[submodule "vim/bundle/drupal-snippets"]
+	path = vim/bundle/drupal-snippets
+	url = git://github.com/tanarurkerem/drupal-snippets.git
+[submodule "vim/bundle/snipmate-snippets"]
+	path = vim/bundle/snipmate-snippets
+	url = git://github.com/honza/snipmate-snippets.git
