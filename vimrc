@@ -59,18 +59,6 @@ if has("autocmd")
     \   exe "normal! g`\"" |
     \ endif
 
-  " Drupal command group, set the correct filetypes for Drupal files.
-  augroup drupal
-    autocmd BufRead,BufNewFile *.module set filetype=php
-    autocmd BufRead,BufNewFile *.theme set filetype=php
-    autocmd BufRead,BufNewFile *.inc set filetype=php
-    autocmd BufRead,BufNewFile *.install set filetype=php
-    autocmd BufRead,BufNewFile *.info set filetype=php
-    autocmd BufRead,BufNewFile *.engine set filetype=php
-    autocmd BufRead,BufNewFile *.profile set filetype=php
-    autocmd BufRead,BufNewFile *.test set filetype=php
-  augroup END
-
   " mrelendig: Python stuff
   autocmd FileType python let python_highlight_all = 1
   autocmd FileType python let python_slow_sync = 1
