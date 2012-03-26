@@ -56,6 +56,9 @@ export PIP_VIRTUALENV_BASE=$WORKON_HOME
 #perlbrew: source the perlbrew
 source ~/perl5/perlbrew/etc/bashrc
 
+# nvm: source the nvm
+source ~/.nvm/nvm.sh
+
 # rvm : loads RVM into a shell session.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
