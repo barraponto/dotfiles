@@ -56,4 +56,8 @@ export PIP_VIRTUALENV_BASE=$WORKON_HOME
 #perlbrew: source the perlbrew
 source ~/perl5/perlbrew/etc/bashrc
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# rvm : loads RVM into a shell session.
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+# rvm: add rvm to the path
+PATH=$PATH:$HOME/.rvm/bin
