@@ -18,10 +18,10 @@
   insteadOf = trellon://
 [url "git://github.com/"]
   insteadOf = github://
-[url "git://github.com/barraponto/"]
-  insteadOf = barraponto://
 [url "git@github.com:barraponto/"]
-  pushinsteadOf = barraponto://
+  insteadOf = barraponto://
+[url "git@github.com:umamao/"]
+  insteadOf = umamao://
 [receive]
 	denyNonFastForwards = true
 [core]
