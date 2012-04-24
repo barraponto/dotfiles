@@ -5,8 +5,22 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# PS1='[\u@\h \W]\$ '
-PS1='\[\e[0;31m\]\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[0;31m\]$(__git_ps1 "(%s)") $ \[\e[m\]\[\e[0;32m\] '
+# PS1: returns current rvm gemset
+function __rvm_ps1() {
+  local gemset_is_loaded rvmprompt
+    # if there is a gemset loaded
+    # then there is a separator (usually an @ symbol)
+    gemset_is_loaded="$(rvm-prompt | grep @)"
+    if [ -n "$gemset_is_loaded" ]; then
+      # following string operator trims greedily up to last @
+      echo "(${gemset_is_loaded##*@}) "
+    else
+      exit
+    fi
+}
+
+# PS1='`__rvm_ps1`\w`__git_ps1` $ '
+PS1='\[\e[1;34m\]`__rvm_ps1`\w\[\e[m\]\[\e[0;31m\]`__git_ps1` $ \[\e[m\]'
 
 # ubuntu: load aliases from .bash_aliases
 if [ -f ~/.bash_aliases ]; then
@@ -57,10 +71,10 @@ export PIP_VIRTUALENV_BASE=$WORKON_HOME
 source ~/perl5/perlbrew/etc/bashrc
 
 # nvm: source the nvm
-source ~/.nvm/nvm.sh
-
-# rvm : loads RVM into a shell session.
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+source ~/.local/opt/nvm/nvm.sh
 
 # rvm: add rvm to the path
 PATH=$PATH:$HOME/.rvm/bin
+
+# This loads RVM into a shell session.
+[[ -s "/home/barraponto/.rvm/scripts/rvm" ]] && source "/home/barraponto/.rvm/scripts/rvm"
