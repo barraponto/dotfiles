@@ -26,3 +26,5 @@
 	denyNonFastForwards = true
 [core]
   excludesfile = ~/.gitignore
+[github]
+	user = barraponto
