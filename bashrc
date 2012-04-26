@@ -61,8 +61,13 @@ if [ -f ~/.drush_aliases ]; then
     . ~/.drush_aliases
 fi
 
-# virtualenvwrapper: make virtualenvs work nice
-source ~/.local/bin/virtualenvwrapper.sh
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # startup virtualenv-burrito
+    if [ -f "$HOME/.venvburrito/startup.sh" ]; then
+        . "$HOME/.venvburrito/startup.sh"
+    fi
+fi
 
 # pip: create virtualenvs in workon home
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
