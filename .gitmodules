@@ -57,7 +57,7 @@
 	url = git://github.com/scrooloose/syntastic.git
 [submodule "vim/bundle/gist"]
 	path = vim/bundle/gist
-	url = git://github.com/vim-scripts/Gist.vim.git
+	url = git://github.com/mattn/gist-vim.git
 [submodule "vim/bundle/mw-utils"]
 	path = vim/bundle/mw-utils
 	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
