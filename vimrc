@@ -83,6 +83,7 @@ let php_htmlInStrings = 1
 " syntastic: syntastic options
 let g:syntastic_auto_jump=1    " jump to the erros on file save (or file load)
 let g:syntastic_auto_loc_list=1 " automatically open and close error windows
+let g:syntastic_phpcs_conf="--standard=Drupal"
 
 " gotravings: jamessan statusbar (cherrypicked)
 set statusline+=[%{strlen(&ft)?&ft:'none'},  " filetype
