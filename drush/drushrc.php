@@ -83,6 +83,10 @@ $options['shell-aliases']['offline'] = 'variable-set -y --always-set maintenance
 $options['shell-aliases']['online'] = 'variable-delete -y --exact maintenance_mode';
 // Add a 'pm-clone' to simplify (cached) git cloning from drupal.org.
 $options['shell-aliases']['clone'] = 'pm-download --package-handler=git_drupalorg --cache';
+// Rolling out my own git-on-drupal tricks.
+$options['shell-aliases']['gm'] = 'pm-download --package-handler=git_drupalorg --cache --gitsubmodule --destination=modules';
+$options['shell-aliases']['gl'] = 'pm-download --package-handler=git_drupalorg --cache --gitsubmodule --destination=themes';
+$options['shell-aliases']['gp'] = 'pm-download --package-handler=git_drupalorg --cache --gitsubmodule --destination=profiles';
 
 // Load a drushrc.php configuration file from the current working directory.
 # $options['config'][] = '.';
