@@ -26,7 +26,6 @@ set shiftwidth=2  " indent size on autoindent or >>
 set shiftround    " always round indentation to shiftwidth
 set tabstop=2     " tab display size 
 set softtabstop=2 " tab size in insert mode (not indent)
-set mouse=a       " enable mouse usage 
 set gdefault      " substitutes on the whole line by default (no trailing /g)
 set showmode      " shows what mode the user is in
 set showcmd       " displays partial commands as you type
