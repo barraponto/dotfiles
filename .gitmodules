@@ -97,3 +97,12 @@
 [submodule "vim/bundle/jade"]
 	path = vim/bundle/jade
 	url = git://github.com/digitaltoad/vim-jade
+[submodule "vim/bundle/showtrailingwhitespace"]
+	path = vim/bundle/showtrailingwhitespace
+	url = git://github.com/vim-scripts/ShowTrailingWhitespace.git
+[submodule "vim/bundle/deletetrailingwhitespace"]
+	path = vim/bundle/deletetrailingwhitespace
+	url = git://github.com/vim-scripts/DeleteTrailingWhitespace.git
+[submodule "vim/bundle/jumptotrailingwhitespace"]
+	path = vim/bundle/jumptotrailingwhitespace
+	url = git://github.com/vim-scripts/JumpToTrailingWhitespace.git
