@@ -106,3 +106,9 @@
 [submodule "vim/bundle/jumptotrailingwhitespace"]
 	path = vim/bundle/jumptotrailingwhitespace
 	url = git://github.com/vim-scripts/JumpToTrailingWhitespace.git
+[submodule "vim/bundle/countjump"]
+	path = vim/bundle/countjump
+	url = git://github.com/vim-scripts/CountJump.git
+[submodule "vim/bundle/less"]
+	path = vim/bundle/less
+	url = git://github.com/groenewege/vim-less.git
