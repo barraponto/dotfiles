@@ -12,7 +12,7 @@ call pathogen#infect()
 call pathogen#helptags()
 
 " janus: allow backspacing over everything in insert mode
-set backspace=indent,eol,start 
+set backspace=indent,eol,start
 
 " barraponto: some regular options
 set number        " show line numbers
@@ -22,10 +22,10 @@ set linebreak     " wrap only on word boundaries
 set hidden        " allows hiding buffers with changes
 set expandtab     " turn tabs into spaces
 set autoindent    " automatic indenting
-set smartindent   " smart indenting 
+set smartindent   " smart indenting
 set shiftwidth=2  " indent size on autoindent or >>
 set shiftround    " always round indentation to shiftwidth
-set tabstop=2     " tab display size 
+set tabstop=2     " tab display size
 set softtabstop=2 " tab size in insert mode (not indent)
 set gdefault      " substitutes on the whole line by default (no trailing /g)
 set showmode      " shows what mode the user is in
@@ -41,7 +41,7 @@ set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.i
 " janus: search options
 set hlsearch      " highlights search results
 set incsearch     " incremental search results
-set ignorecase    " ignores case when searching 
+set ignorecase    " ignores case when searching
 set smartcase     " only ignores cases on smallcaps
 
 " amix.dk: turn off backup, turn on persistent undo
@@ -67,7 +67,7 @@ if has("autocmd")
   " mrelendig: Python stuff
   autocmd FileType python let python_highlight_all = 1
   autocmd FileType python let python_slow_sync = 1
-  autocmd FileType python set expandtab shiftwidth=4 softtabstop=4 
+  autocmd FileType python set expandtab shiftwidth=4 softtabstop=4
   autocmd FileType python set completeopt=preview"
 
 endif
