@@ -48,7 +48,12 @@ set smartcase     " only ignores cases on smallcaps
 set nobackup
 set nowb
 set noswapfile
-set undodir=~/.vim/undodir
+
+if !isdirectory($HOME . "/.vim/backups")
+  call mkdir($HOME . "/.vim/backups")
+endif
+
+set undodir=~/.vim/backups
 set undofile
 
 " enable syntax for the win
