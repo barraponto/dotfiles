@@ -30,6 +30,7 @@ set softtabstop=2 " tab size in insert mode (not indent)
 set gdefault      " substitutes on the whole line by default (no trailing /g)
 set showmode      " shows what mode the user is in
 set showcmd       " displays partial commands as you type
+set title         " set the window title
 
 set background=light " making the background lighter for ubuntu
 set t_Co=16 " this fixes the background for ubuntu
