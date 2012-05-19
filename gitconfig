@@ -13,6 +13,7 @@
   type = cat-file -t
   dump = cat-file -p
   submodule-rm = !git-submodule-rm
+  amend = commit --amend
 [url "http://git.drupal.org/project/"]
   insteadOf = drupal://
 [url "http://git.drupal.org/sandbox/"]
