@@ -87,6 +87,7 @@ $options['shell-aliases']['clone'] = 'pm-download --package-handler=git_drupalor
 $options['shell-aliases']['gm'] = 'pm-download --package-handler=git_drupalorg --cache --gitsubmodule --destination=modules';
 $options['shell-aliases']['gl'] = 'pm-download --package-handler=git_drupalorg --cache --gitsubmodule --destination=themes';
 $options['shell-aliases']['gp'] = 'pm-download --package-handler=git_drupalorg --cache --gitsubmodule --destination=profiles';
+$options['shell-aliases']['gd'] = 'pm-download --package-handler=git_drupalorg --cache --gitsubmodule --drupal-project-rename=drupal';
 
 // Load a drushrc.php configuration file from the current working directory.
 # $options['config'][] = '.';
