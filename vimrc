@@ -32,6 +32,9 @@ set showmode      " shows what mode the user is in
 set showcmd       " displays partial commands as you type
 set title         " set the window title
 
+set wildmenu      " fix the autocomplete behavior in command mode
+set wildmode=list:longest " autocomplete up to point of ambiguity
+
 set background=light " making the background lighter for ubuntu
 set t_Co=16 " this fixes the background for ubuntu
 colorscheme solarized " nice looking colorscheme for both dark and light backgrounds
