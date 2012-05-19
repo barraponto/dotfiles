@@ -6,8 +6,9 @@ if match($TERM, "screen")!=-1
   set term=xterm
 endif
 
-" panaggio: enable pathogen features
-call pathogen#runtime_append_all_bundles()
+" skwp: enable pathogen features
+runtime bundle/pathogen/autoload/pathogen.vim
+call pathogen#infect()
 call pathogen#helptags()
 
 " janus: allow backspacing over everything in insert mode
