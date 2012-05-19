@@ -10,6 +10,7 @@
   br = branch
   ff = merge --ff-only
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  changelog = log --pretty=format:\" * %s\"
   type = cat-file -t
   dump = cat-file -p
   submodule-rm = !git-submodule-rm
