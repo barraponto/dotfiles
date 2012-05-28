@@ -35,3 +35,5 @@
   excludesfile = ~/.gitignore
 [github]
 	user = barraponto
+[diff]
+  mnemonicprefix = true
