@@ -83,3 +83,6 @@ PATH=$PATH:$HOME/.rvm/bin
 
 # This loads RVM into a shell session.
 [[ -s "/home/barraponto/.rvm/scripts/rvm" ]] && source "/home/barraponto/.rvm/scripts/rvm"
+
+# tmuxinator
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
