@@ -53,7 +53,7 @@ function drush-undis () { drush dis $1 --yes && drush pm-uninstall $1 --yes; }
 function yt () { mplayer -fs -quiet $(youtube-dl -g "$1"); }
 
 if [ -f /etc/debian_version ]; then
- . /etc/bash_completion 
+ . /etc/bash_completion
 fi
 
 # nuvoleweb: load aliases from .drush_aliases
