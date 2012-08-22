@@ -26,7 +26,7 @@ RVM
 ===
 
 Just run:
-    bash < <( curl http://rvm.beginrescueend.com/releases/rvm-install-head )
+    bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
 
 Then restart your terminal and run:
     rvm install 1.8.7
