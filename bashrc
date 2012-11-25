@@ -61,8 +61,9 @@ source ~/perl5/perlbrew/etc/bashrc
 # nvm: source the nvm
 source ~/.local/opt/nvm/nvm.sh
 
+# ruby: add rubygems to the path
 # rvm: add rvm to the path
-PATH=$PATH:$HOME/.rvm/bin
+PATH=$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin:$HOME/.rvm/bin
 
 # This loads RVM into a shell session.
 [[ -s "/home/barraponto/.rvm/scripts/rvm" ]] && source "/home/barraponto/.rvm/scripts/rvm"
