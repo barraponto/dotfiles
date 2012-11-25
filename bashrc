@@ -5,22 +5,11 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# PS1: returns current rvm gemset
-function __rvm_ps1() {
-  local gemset_is_loaded rvmprompt
-    # if there is a gemset loaded
-    # then there is a separator (usually an @ symbol)
-    gemset_is_loaded="$(rvm-prompt | grep @)"
-    if [ -n "$gemset_is_loaded" ]; then
-      # following string operator trims greedily up to last @
-      echo "(${gemset_is_loaded##*@}) "
-    else
-      exit
-    fi
-}
+# git: make __git_ps1 available
+source /usr/share/git/git-prompt.sh
 
-# PS1='`__rvm_ps1`\w`__git_ps1` $ '
-PS1='\[\e[1;34m\]`__rvm_ps1`\w\[\e[m\]\[\e[0;31m\]`__git_ps1` $ \[\e[m\]'
+# PS1='$rvm_ps1\w`__git_ps1` $ '
+PS1='\[\e[1;34m\]$($HOME/.rvm/bin/rvm-prompt u g)\w\[\e[m\]\[\e[0;31m\]`__git_ps1` $ \[\e[m\]'
 
 # ubuntu: load aliases from .bash_aliases
 if [ -f ~/.bash_aliases ]; then
