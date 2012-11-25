@@ -6,8 +6,8 @@
 [alias]
   co = checkout
   ci = commit
-  st = status
   br = branch
+  st = status -s
   ff = merge --ff-only
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   changelog = log --pretty=format:\" * %s\"
@@ -35,5 +35,3 @@
   excludesfile = ~/.gitignore
 [github]
 	user = barraponto
-[diff]
-  mnemonicprefix = true
