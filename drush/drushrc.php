@@ -85,7 +85,7 @@ $options['shell-aliases']['online'] = 'variable-delete -y --exact maintenance_mo
 $options['shell-aliases']['clone'] = 'pm-download --package-handler=git_drupalorg --cache';
 // Rolling out my own git-on-drupal tricks.
 $options['shell-aliases']['gm'] = 'pm-download --package-handler=git_drupalorg --cache --gitsubmodule --destination=modules';
-$options['shell-aliases']['gl'] = 'pm-download --package-handler=git_drupalorg --cache --gitsubmodule --destination=themes';
+$options['shell-aliases']['gt'] = 'pm-download --package-handler=git_drupalorg --cache --gitsubmodule --destination=themes';
 $options['shell-aliases']['gp'] = 'pm-download --package-handler=git_drupalorg --cache --gitsubmodule --destination=profiles';
 $options['shell-aliases']['gd'] = 'pm-download --package-handler=git_drupalorg --cache --gitsubmodule --drupal-project-rename=drupal';
 
