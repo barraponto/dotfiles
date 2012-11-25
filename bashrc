@@ -50,16 +50,10 @@ if [ -f ~/.drush_aliases ]; then
     . ~/.drush_aliases
 fi
 
-# if running bash
-if [ -n "$BASH_VERSION" ]; then
-    # startup virtualenv-burrito
-    if [ -f "$HOME/.venvburrito/startup.sh" ]; then
-        . "$HOME/.venvburrito/startup.sh"
-    fi
-fi
-
 # pip: create virtualenvs in workon home
-export PIP_VIRTUALENV_BASE=$WORKON_HOME
+# export WORKON_HOME=$HOME/.virtualenvs
+# export PIP_VIRTUALENV_BASE=$WORKON_HOME
+# source /usr/bin/virtualenvwrapper.sh
 
 #perlbrew: source the perlbrew
 source ~/perl5/perlbrew/etc/bashrc
