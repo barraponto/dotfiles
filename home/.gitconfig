@@ -1,0 +1,33 @@
+[color]
+  ui = auto
+[user]
+  name = Capi Etheriel
+  email = barraponto@gmail.com
+[github]
+  user = barraponto
+[core]
+  excludesfile = ~/.gitignore
+[alias]
+  co = checkout
+  ci = commit
+  br = branch
+  st = status -s
+  ff = merge --ff-only
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  changelog = log --pretty=format:\" * %s\"
+  sg = diff --staged
+  staged = diff --staged
+  nb = checkout -b
+  newbranch = checkout -b
+  submodule-rm = !git-submodule-rm
+  amend = commit --amend
+[receive]
+  denyNonFastForwards = true
+[push]
+  default = current
+[help]
+  autocorrect = 20
+[url "http://git.drupal.org/project/"]
+  insteadOf = drupal://
+[url "http://git.drupal.org/sandbox/"]
+  insteadOf = drupalsand://
