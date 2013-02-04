@@ -1,0 +1,14 @@
+set wrap                             " visually wrap lines
+set background=light                 " assume light backgrounds (fixes solarized light)
+set smartindent                      " smart indenting
+set shiftwidth=2                     " default to two spaces
+set tabstop=2                        " default to two spaces
+set softtabstop=2                    " default to two spaces
+set shiftround                       " always round indentation to shiftwidth
+set mouse=                           " disable mouse
+
+let g:autoclose_vim_commentmode=1    " don't autoclose quotes in vim files
+let g:pymode_lint_checker = "pylint" " more powerful than pep8
+
+" Increase indenting for javascript and python
+autocmd FileType javascript,python setlocal sw=4 ts=4 sts=4

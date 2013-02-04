@@ -1,0 +1,10 @@
+" Disable scala bundles.
+let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'misc']
+" Up-to-date snippets for Drupal 7
+Bundle 'technosophos/drupal-snippets'
+" Brunch support (http://brunch.io)
+Bundle 'drichard/vim-brunch'
+" Let . repeat especial commands like those from Surround plugin
+Bundle 'tpope/vim-repeat'
+" HTML5 support... not working yet.
+Bundle 'othree/html5.vim'
