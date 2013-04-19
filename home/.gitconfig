@@ -1,12 +1,3 @@
-[color]
-  ui = auto
-[user]
-  name = Capi Etheriel
-  email = barraponto@gmail.com
-[github]
-  user = barraponto
-[core]
-  excludesfile = ~/.gitignore
 [alias]
   co = checkout
   ci = commit
@@ -21,12 +12,21 @@
   newbranch = checkout -b
   submodule-rm = !git-submodule-rm
   amend = commit --amend
-[receive]
-  denyNonFastForwards = true
-[push]
-  default = current
+[color]
+  ui = auto
+[core]
+  excludesfile = ~/.gitignore
+[github]
+  user = barraponto
 [help]
   autocorrect = 20
+[push]
+  default = current
+[receive]
+  denyNonFastForwards = true
+[user]
+  name = Capi Etheriel
+  email = barraponto@gmail.com
 [url "http://git.drupal.org/project/"]
   insteadOf = drupal://
 [url "http://git.drupal.org/sandbox/"]

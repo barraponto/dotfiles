@@ -1,14 +1,22 @@
-set wrap                             " visually wrap lines
-set background=light                 " assume light backgrounds (fixes solarized light)
-set smartindent                      " smart indenting
-set shiftwidth=2                     " default to two spaces
-set tabstop=2                        " default to two spaces
-set softtabstop=2                    " default to two spaces
-set shiftround                       " always round indentation to shiftwidth
-set mouse=                           " disable mouse
+set wrap                      " visually wrap lines
+set smartindent               " smart indenting
+set shiftwidth=2              " default to two spaces
+set tabstop=2                 " default to two spaces
+set softtabstop=2             " default to two spaces
+set shiftround                " always round indentation to shiftwidth
+set mouse=                    " disable mouse
 
-let g:autoclose_vim_commentmode=1    " don't autoclose quotes in vim files
-let g:pymode_lint_checker = "pylint" " more powerful than pep8
+set t_Co=16                   " set vim terminal to 16 color mode
+let g:CSApprox_loaded=1       " disable csapprox
+let g:solarized_termcolors=16 " tell solarized to trust the terminal 16 colors
+color solarized               " use the solarized colorscheme
+set background=light          " match light-solarized terminal emulators
+
+let g:autoclose_vim_commentmode=1       " don't autoclose quotes in vim files
+let g:pymode_lint_checker="pep8,pylint" " pep8, then pylint. no pyflakes.
 
 " Increase indenting for javascript and python
 autocmd FileType javascript,python setlocal sw=4 ts=4 sts=4
+
+let g:pymode_rope=0 " Don't need this right now.
+UnBundle 'spf13/vim-preview'

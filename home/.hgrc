@@ -1,0 +1,27 @@
+[ui]
+username = Capi Etheriel <barraponto@gmail.com>
+
+[pager]
+pager = LESS='FSRX' less
+attend = annotate, cat, diff, export, glog, hist, log, qdiff
+
+[extensions]
+color =
+bookmarks =
+rebase =
+purge =
+hgshelve =
+hggit =
+pager =
+churn =
+progress =
+record =
+
+[alias]
+hist = log --template '{rev} | {date|shortdate} | {author|user}: {desc|strip|firstline}\n'
+web = !firefox https://hg.scrapinghub.com/enclarity/enclarity/file/tip/$1
+url = !echo "https://hg.scrapinghub.com/enclarity/enclarity/file/tip/$1"
+__mystatus = status
+st = !hg __mystatus $($HG root) $HG_ARGS
+stash = shelve --all
+show = log -pr

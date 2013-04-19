@@ -1,0 +1,4 @@
+--type-set=haml=.haml
+--type-set=sass=.sass,.scss
+--type-set=drupal=.module,.php,.inc,.info,.profile,.make
+--type-set=info=.info

@@ -1,0 +1,2 @@
+# Read about the gemrc format at http://docs.rubygems.org/read/chapter/11
+gem: --no-user-install

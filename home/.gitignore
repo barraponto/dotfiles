@@ -1,5 +1,5 @@
 node_modules/
 .sass-cache/
-doc/tags
 *~
 .*.swp
+doc/tags
