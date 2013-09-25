@@ -21,7 +21,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(archlinux battery compleat fasd gem git github history-substring-search mercurial node npm pip python rvm screen sprunge systemd urltools vagrant virtualenvwrapper)
+plugins=(archlinux compleat fasd gem git github history-substring-search mercurial node npm pip python rvm screen sprunge systemd urltools vagrant virtualenv virtualenvwrapper)
 
 # OH MY ZSH! from robbyrussell/oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
