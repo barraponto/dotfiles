@@ -43,6 +43,7 @@ export PATH=$PATH:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl # S
 export PATH=$PATH:$HOME/.rvm/bin # RVM scripts and wrappers
 export PATH=$PATH:$HOME/.gem/ruby/1.9.1/bin # Local Ruby gems executables
 export PATH=$PATH:$HOME/.cabal/bin # Local Cabal packages executables
+export PATH=$PATH:$HOME/.local/npm-packages/bin # NPM global packages
 export PATH=$PATH:$HOME/.local/bin # My local packages
 
 # Other exports
