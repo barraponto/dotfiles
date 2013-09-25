@@ -55,8 +55,8 @@ export PYTHONDOCS=/usr/share/doc/python2/html/ # Needed for the python2-docs pac
 eval `keychain --eval --agents ssh id_rsa --quiet`
 
 # Scrapy helper functions
-function scrapy-devel () { eval "echo '' > ~/Desktop/$1-results.csv && scrapy crawl --set=HTTPCACHE_ENABLED=1 $1 --output-format=CSV --output=/home/barraponto/Desktop/$1-results.csv > ~/Desktop/$1-results.log" }
-function scrapy-debug () { eval "echo '' > ~/Desktop/$1-results.csv && scrapy crawl --set=HTTPCACHE_ENABLED=1 --loglevel=INFO $1 --output-format=CSV --output=/home/barraponto/Desktop/$1-results.csv > ~/Desktop/$1-results.log" }
+function scrapy-devel () { eval "echo '' > ~/Desktop/$1-results.csv && scrapy crawl --set=HTTPCACHE_ENABLED=1 $1 --output-format=csv --output=/home/barraponto/Desktop/$1-results.csv > ~/Desktop/$1-results.log" }
+function scrapy-debug () { eval "echo '' > ~/Desktop/$1-results.csv && scrapy crawl --set=HTTPCACHE_ENABLED=1 --loglevel=INFO $1 --output-format=csv --output=/home/barraponto/Desktop/$1-results.csv > ~/Desktop/$1-results.log" }
 
 # Tmuxinator tab names are overriden by zsh auto title.
 export DISABLE_AUTO_TITLE='true'
