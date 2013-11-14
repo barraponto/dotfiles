@@ -65,7 +65,7 @@
 #"rxvt"
 #  Control + b:2 + Release
 
-"/home/barraponto/.local/bin/touchpad-toggle"
+"$HOME.local/bin/touchpad-toggle"
     m:0x0 + c:248
         NoSymbol
 
