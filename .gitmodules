@@ -1,0 +1,3 @@
+[submodule "home/.local/opt/ls-colors-solarized"]
+	path = home/.local/opt/ls-colors-solarized
+	url = git://github.com/sigurdga/ls-colors-solarized.git
