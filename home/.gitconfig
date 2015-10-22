@@ -2,7 +2,7 @@
   co = checkout
   ci = commit
   br = branch
-  st = status -s
+  st = status --short
   ff = merge --ff-only
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   changelog = log --pretty=format:\" * %s\"
@@ -10,7 +10,6 @@
   staged = diff --staged
   nb = checkout -b
   newbranch = checkout -b
-  submodule-rm = !git-submodule-rm
   amend = commit --amend
 [color]
   ui = auto
