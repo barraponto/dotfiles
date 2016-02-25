@@ -85,6 +85,9 @@ $options['shell-aliases']['dis-all'] = '!drush -y dis `drush pml --status=enable
 // Add a 'pm-clone' to simplify git cloning from drupal.org.
 $options['shell-aliases']['clone'] = 'pm-download --package-handler=git_drupalorg';
 
+// Add a 'lazy-sync' to rsync without files, config.php nor other sites.
+$options['shell-aliases']['lazy-sync'] = 'rsync --exclude-files --exclude-other-sites --exclude-conf';
+
 // You can create a local cache of all projects checked out using
 // --package-handler=git_drupalorg; this can be faster for repeated
 // downloads, but can be brittle. See: http://randyfay.com/node/119
