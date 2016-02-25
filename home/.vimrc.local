@@ -25,4 +25,7 @@ let g:vimroom_sidebar_height=0          " vimroom: no vertical padding
 autocmd FileType javascript,python setlocal sw=4 ts=4 sts=4
 
 let g:pymode_rope=0 " Don't need this right now.
-UnBundle 'spf13/vim-preview'
+
+" Fix neocomplete <CR> behavior
+" @see https://github.com/spf13/spf13-vim/issues/819#issuecomment-145378767
+inoremap <expr><CR> neosnippet#expandable() ? neosnippet#mappings#expand_or_jump_impl() : pumvisible() ? neocomplete#close_popup() : "\<CR>"

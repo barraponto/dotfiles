@@ -1,4 +1,4 @@
-let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming', 'php', 'ruby', 'python', 'javascript', 'html', 'twig', 'misc']
+let g:spf13_bundle_groups=['general', 'programming', 'writing', 'neocomplete', 'php', 'ruby', 'python', 'javascript', 'html', 'twig', 'misc']
 Bundle 'technosophos/drupal-snippets'
 Bundle 'drichard/vim-brunch'
 Bundle 'tpope/vim-repeat'
