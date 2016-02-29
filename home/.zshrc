@@ -18,11 +18,8 @@ COMPLETION_WAITING_DOTS="true"
 # Tmuxinator tab names are overriden by zsh auto title.
 export DISABLE_AUTO_TITLE='true'
 
-# OH MY ZSH! from robbyrussell/oh-my-zsh.
-source $ZSH/oh-my-zsh.sh
-
-# Gibo: gitignore boilerplates from simonwhitaker/gitignore-boilerplates.
-source ~/.local/opt/gitignore-boilerplates/gibo-completion.zsh
+# Ready satanic cow template
+export ANSIBLE_COW_SELECTION=satanic
 
 # Aliases
 alias zshconfig="vim ~/.zshrc"
