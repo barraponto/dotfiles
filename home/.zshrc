@@ -1,9 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-# Use solarized colors from sigurdga/ls-colors-solarized
-eval `dircolors /home/barraponto/.local/opt/ls-colors-solarized/dircolors`
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Powerline theme installed from jeremyFreeAgent/oh-my-zsh-powerline-theme
@@ -58,6 +55,7 @@ eval `keychain --eval --agents ssh id_rsa --quiet`
 function scrapy-devel () { eval "echo '' > ~/Desktop/$1-results.csv && scrapy crawl --set=HTTPCACHE_ENABLED=1 $1 --output-format=csv --output=/home/barraponto/Desktop/$1-results.csv > ~/Desktop/$1-results.log" }
 function scrapy-debug () { eval "echo '' > ~/Desktop/$1-results.csv && scrapy crawl --set=HTTPCACHE_ENABLED=1 --loglevel=INFO $1 --output-format=csv --output=/home/barraponto/Desktop/$1-results.csv > ~/Desktop/$1-results.log" }
 
-# Tmuxinator tab names are overriden by zsh auto title.
-export DISABLE_AUTO_TITLE='true'
+
+# Use solarized colors from sigurdga/ls-colors-solarized
+eval `dircolors /home/barraponto/.local/opt/ls-colors-solarized/dircolors`
 
