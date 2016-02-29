@@ -1,6 +1,7 @@
 let g:spf13_bundle_groups=['general', 'programming', 'writing', 'neocomplete', 'php', 'ruby', 'python', 'javascript', 'html', 'twig', 'misc']
 Bundle 'technosophos/drupal-snippets'
-Bundle 'drichard/vim-brunch'
-Bundle 'tpope/vim-repeat'
+Bundle 'mitsuhiko/vim-jinja'
 Bundle 'othree/html5.vim'
 Bundle 'mikewest/vimroom'
+Bundle 'parkr/vim-jekyll'
+Bundle 'tpope/vim-liquid'
