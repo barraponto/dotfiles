@@ -48,6 +48,10 @@ export PATH=$HOME/.local/bin:$PATH # My local packages
 export EDITOR=vim # Bitch, please.
 export VIRTUAL_ENV_DISABLE_PROMPT=1 # Let Virtualenv prompt show up in the zsh theme.
 export PYTHONDOCS=/usr/share/doc/python2/html/ # Needed for the python2-docs package.
+export HISTIGNORE='pwd:exit:clear:jrnl:vault:[ \t]*' # does not work in zsh
+export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
+export LESS=' -R '
+export WINEARCH=win32 # should avoid some issues
 
 # Get the keychain running.
 eval `keychain --eval --agents ssh id_rsa --quiet`
