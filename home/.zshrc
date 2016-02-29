@@ -23,8 +23,19 @@ export ANSIBLE_COW_SELECTION=satanic
 
 # Aliases
 alias zshconfig="vim ~/.zshrc"
+alias sshconfig="vim ~/.ssh/config"
 alias vimconfig="vim -p ~/.vimrc.local ~/.vimrc.bundles.local"
+alias i3config="vim -p ~/.config/i3/config ~/.config/i3blocks/config"
 alias lodgeit="python2 ~/.local/opt/lodgeit-main/scripts/lodgeit.py"
+alias vimtabs="parallel -Xj1 --tty vim -p"
+
+# HISTIGNORE aliases
+alias jrnl=' jrnl'
+alias vault=' vault'
+
+tabexpand () {
+  expand -t2 $1 > /tmp/tabexpand; mv /tmp/tabexpand $1;
+}
 
 # Path extensions
 export PATH=$PATH:/opt/android-sdk/platform-tools:/opt/android-sdk/tools # Android SDK
