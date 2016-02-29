@@ -53,8 +53,13 @@ export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
 export LESS=' -R '
 export WINEARCH=win32 # should avoid some issues
 
-# Get the keychain running.
-eval `keychain --eval --agents ssh id_rsa --quiet`
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(bower bundler colored-man-pages composer copydir copyfile cp django gem history-substring-search pip python rvm rsync systemd urltools vagrant virtualenv virtualenvwrapper)
+
+# OH MY ZSH! from robbyrussell/oh-my-zsh.
+source $ZSH/oh-my-zsh.sh
 
 # Scrapy helper functions
 function scrapy-devel () { eval "echo '' > ~/Desktop/$1-results.csv && scrapy crawl --set=HTTPCACHE_ENABLED=1 $1 --output-format=csv --output=/home/barraponto/Desktop/$1-results.csv > ~/Desktop/$1-results.log" }
