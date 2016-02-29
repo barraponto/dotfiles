@@ -34,3 +34,7 @@
   insteadOf = drupalsand://
 # [http]
 # proxy = http://localhost:1234
+[pager]
+  # support https://github.com/so-fancy/diff-so-fancy
+  diff = diff-so-fancy | less --tabs=1,5 -RFX
+  show = diff-so-fancy | less --tabs=1,5 -RFX
