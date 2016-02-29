@@ -15,10 +15,8 @@ POWERLINE_SHOW_GIT_ON_RIGHT="true"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(archlinux compleat fasd gem git github history-substring-search mercurial node npm pip python rvm screen sprunge systemd urltools vagrant virtualenv virtualenvwrapper)
+# Tmuxinator tab names are overriden by zsh auto title.
+export DISABLE_AUTO_TITLE='true'
 
 # OH MY ZSH! from robbyrussell/oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
