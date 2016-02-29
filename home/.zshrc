@@ -61,11 +61,19 @@ plugins=(bower bundler colored-man-pages composer copydir copyfile cp django gem
 # OH MY ZSH! from robbyrussell/oh-my-zsh.
 source $ZSH/oh-my-zsh.sh
 
-# Scrapy helper functions
-function scrapy-devel () { eval "echo '' > ~/Desktop/$1-results.csv && scrapy crawl --set=HTTPCACHE_ENABLED=1 $1 --output-format=csv --output=/home/barraponto/Desktop/$1-results.csv > ~/Desktop/$1-results.log" }
-function scrapy-debug () { eval "echo '' > ~/Desktop/$1-results.csv && scrapy crawl --set=HTTPCACHE_ENABLED=1 --loglevel=INFO $1 --output-format=csv --output=/home/barraponto/Desktop/$1-results.csv > ~/Desktop/$1-results.log" }
+# Gibo: gitignore boilerplates from simonwhitaker/gitignore-boilerplates.
+source $HOME/.local/opt/gibo/gibo-completion.zsh
 
+# ZSH syntax highlighting
+source $HOME/.local/opt/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+
+setopt HIST_IGNORE_ALL_DUPS
 
 # Use solarized colors from sigurdga/ls-colors-solarized
 eval `dircolors /home/barraponto/.local/opt/ls-colors-solarized/dircolors`
 
+# Get the keychain running.
+eval `keychain --eval --agents ssh id_rsa --quiet`
+
+# run taskwarrior on every shell
+task
