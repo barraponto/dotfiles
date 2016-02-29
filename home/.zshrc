@@ -38,16 +38,11 @@ tabexpand () {
 }
 
 # Path extensions
-export PATH=$PATH:/opt/android-sdk/platform-tools:/opt/android-sdk/tools # Android SDK
-export PATH=$PATH:/opt/grass/bin # Grass GIS
-export PATH=$PATH:/opt/kde/bin # KDE stuff from kde3libs
-export PATH=$PATH:/opt/qt/bin # QT stuff from qt3
-export PATH=$PATH:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl # System Perl packages
-export PATH=$PATH:$HOME/.rvm/bin # RVM scripts and wrappers
-export PATH=$PATH:$HOME/.gem/ruby/1.9.1/bin # Local Ruby gems executables
-export PATH=$PATH:$HOME/.cabal/bin # Local Cabal packages executables
-export PATH=$PATH:$HOME/.local/npm-packages/bin # NPM global packages
-export PATH=$PATH:$HOME/.local/bin # My local packages
+#export PATH=/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$PATH # System Perl packages
+export PATH=$HOME/.cabal/bin:$PATH # Local Cabal packages executables
+export PATH=$HOME/.composer/vendor/bin:$PATH # Composer (PHP) executables
+#export PATH=$HOME/.rvm/bin:$PATH # RVM scripts and wrappers
+export PATH=$HOME/.local/bin:$PATH # My local packages
 
 # Other exports
 export EDITOR=vim # Bitch, please.
