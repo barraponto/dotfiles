@@ -11,6 +11,7 @@ POWERLINE_HIDE_USER_NAME="true"
 POWERLINE_HIDE_HOST_NAME="true"
 POWERLINE_NO_BLANK_LINE="true"
 POWERLINE_SHOW_GIT_ON_RIGHT="true"
+POWERLINE_PATH="short"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
@@ -37,11 +38,14 @@ tabexpand () {
   expand -t2 $1 > /tmp/tabexpand; mv /tmp/tabexpand $1;
 }
 
+utf8it () {
+  ftfy -e ${2-utf8} $1 > /tmp/utf8it && mv /tmp/utf8it $1;
+}
+
 # Path extensions
-#export PATH=/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:$PATH # System Perl packages
 export PATH=$HOME/.cabal/bin:$PATH # Local Cabal packages executables
 export PATH=$HOME/.composer/vendor/bin:$PATH # Composer (PHP) executables
-#export PATH=$HOME/.rvm/bin:$PATH # RVM scripts and wrappers
+export PATH=$HOME/.rvm/bin:$PATH # RVM scripts and wrappers
 export PATH=$HOME/.local/bin:$PATH # My local packages
 
 # Other exports

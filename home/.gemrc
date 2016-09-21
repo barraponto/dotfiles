@@ -1,2 +1,8 @@
-# Read about the gemrc format at http://docs.rubygems.org/read/chapter/11
-gem: --no-user-install
+---
+:backtrace: false
+:bulk_threshold: 1000
+:sources:
+- https://rubygems.org/
+:update_sources: true
+:verbose: true
+gem: "--no-user-install"

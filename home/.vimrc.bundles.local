@@ -1,7 +1,10 @@
-let g:spf13_bundle_groups=['general', 'programming', 'writing', 'neocomplete', 'php', 'ruby', 'python', 'javascript', 'html', 'twig', 'misc']
+UnBundle 'altercation/vim-colors-solarized'
+Bundle 'arakashic/nvim-colors-solarized'
 Bundle 'technosophos/drupal-snippets'
 Bundle 'mitsuhiko/vim-jinja'
 Bundle 'othree/html5.vim'
 Bundle 'mikewest/vimroom'
 Bundle 'parkr/vim-jekyll'
 Bundle 'tpope/vim-liquid'
+Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'Konfekt/FastFold'

@@ -17,7 +17,7 @@ set background=light          " match light-solarized terminal emulators
 set list listchars=tab:▸\ ,trail:·,eol:¬,nbsp:•
 
 let g:autoclose_vim_commentmode=1       " don't autoclose quotes in vim files
-let g:pymode_lint_checker="pep8-python2,pylint" " pep8, then pylint. no pyflakes.
+let g:pymode_lint_checker="pep8,pylint,pyflakes"
 
 let g:airline_powerline_fonts=1
 
@@ -30,7 +30,3 @@ let g:pymode_rope=0 " Don't need this right now.
 
 " Fixes issues with terminal vim
 set clipboard=
-
-" Fix neocomplete <CR> behavior
-" @see https://github.com/spf13/spf13-vim/issues/819#issuecomment-145378767
-inoremap <expr><CR> neosnippet#expandable() ? neosnippet#mappings#expand_or_jump_impl() : pumvisible() ? neocomplete#close_popup() : "\<CR>"
