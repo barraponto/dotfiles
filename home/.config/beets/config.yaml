@@ -1,0 +1,16 @@
+import:
+  move: true
+  group_albums: true
+plugins:
+  - duplicates
+  - fetchart
+  - lyrics
+  - missing
+  - play
+  - replaygain
+  - scrub
+  - thumbnails
+play:
+  command: /usr/bin/cvlc
+replaygain:
+  backend: gstreamer
