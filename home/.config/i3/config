@@ -180,3 +180,6 @@ exec --no-startup-id sh ~/.fehbg &
 # Set steam dialogs to float (from https://github.com/ValveSoftware/steam-for-linux/issues/597)
 for_window [class="Steam"] floating enable
 for_window [class="Steam" title="^Steam$"] floating disable
+
+# don't steal focus (https://i3wm.org/docs/userguide.html)
+focus_on_window_activation urgent
