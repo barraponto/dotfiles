@@ -29,6 +29,7 @@ alias vimconfig="vim -p ~/.vimrc.local ~/.vimrc.bundles.local"
 alias i3config="vim -p ~/.config/i3/config ~/.config/i3blocks/config"
 alias lodgeit="python2 ~/.local/opt/lodgeit-main/scripts/lodgeit.py"
 alias vimtabs="parallel -Xj1 --tty vim -p"
+alias to-clipboard='xclip -selection c'
 
 # HISTIGNORE aliases
 alias jrnl=' jrnl'
