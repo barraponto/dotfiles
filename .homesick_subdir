@@ -1,3 +1,4 @@
 .config
 .drush
 .local/opt
+.config/mpv
