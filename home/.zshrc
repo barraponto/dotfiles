@@ -1,41 +1,26 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+# User configuration sourced by interactive shells
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Powerline theme installed from jeremyFreeAgent/oh-my-zsh-powerline-theme
-ZSH_THEME="powerline"
+# Change default zim location
+export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 
-# Powerline theme options.
-POWERLINE_HIDE_USER_NAME="true"
-POWERLINE_HIDE_HOST_NAME="true"
-POWERLINE_NO_BLANK_LINE="true"
-POWERLINE_SHOW_GIT_ON_RIGHT="true"
-POWERLINE_PATH="short"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-COMPLETION_WAITING_DOTS="true"
-
-# Tmuxinator tab names are overriden by zsh auto title.
-export DISABLE_AUTO_TITLE='true'
-
-# Ready satanic cow template
-export ANSIBLE_COW_SELECTION=satanic
+# Start zim
+[[ -s ${ZIM_HOME}/init.zsh ]] && source ${ZIM_HOME}/init.zsh# Path to your oh-my-zsh configuration.
 
 # Aliases
-alias zshconfig="vim ~/.zshrc"
+alias zshconfig="vim -p ~/.zshrc ~/.zimrc"
 alias sshconfig="vim ~/.ssh/config"
 alias vimconfig="vim -p ~/.vimrc.local ~/.vimrc.bundles.local"
 alias i3config="vim -p ~/.config/i3/config ~/.config/i3blocks/config"
-alias lodgeit="python2 ~/.local/opt/lodgeit-main/scripts/lodgeit.py"
-alias vimtabs="parallel -Xj1 --tty vim -p"
+alias ssh-add='ssh-add -t 1h'
 alias to-clipboard='xclip -selection c'
+alias be='bundle exec'
 
 # HISTIGNORE aliases
 alias jrnl=' jrnl'
 alias vault=' vault'
+alias pass=' pass'
 
-tabexpand () {
+tabexpand () { # depends on coreutils expand
   expand -t2 $1 > /tmp/tabexpand; mv /tmp/tabexpand $1;
 }
 
@@ -47,38 +32,29 @@ utf8it () {
 export PATH=$HOME/.cabal/bin:$PATH # Local Cabal packages executables
 export PATH=$HOME/.composer/vendor/bin:$PATH # Composer (PHP) executables
 export PATH=$HOME/.rvm/bin:$PATH # RVM scripts and wrappers
+export PATH=$HOME/.config/yarn/global/node_modules/.bin:$PATH # My local packages
 export PATH=$HOME/.local/bin:$PATH # My local packages
 
 # Other exports
 export EDITOR=vim # Bitch, please.
 export VIRTUAL_ENV_DISABLE_PROMPT=1 # Let Virtualenv prompt show up in the zsh theme.
 export PYTHONDOCS=/usr/share/doc/python2/html/ # Needed for the python2-docs package.
-export HISTIGNORE='pwd:exit:clear:jrnl:vault:[ \t]*' # does not work in zsh
-export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
-export LESS=' -R '
+export HISTIGNORE='pwd:exit:clear:jrnl:vault:pass:[ \t]*' # bash-specific
+export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s" # syntax-highlight files
+export LESS=' -R ' # allow color escape sequences
 export WINEARCH=win32 # should avoid some issues
+export ANSIBLE_COW_SELECTION=satanic # Ready satanic cow template
+export MOST_INITFILE=/usr/share/doc/most/lesskeys.rc # use less keys in most
+export PAGER=most # uses most as pager by default
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bower bundler colored-man-pages composer copydir copyfile cp django gem history-substring-search pip python rvm rsync systemd urltools vagrant virtualenv virtualenvwrapper)
-
-# OH MY ZSH! from robbyrussell/oh-my-zsh.
-source $ZSH/oh-my-zsh.sh
+# plugins=(cp rsync systemd)
 
 # Gibo: gitignore boilerplates from simonwhitaker/gitignore-boilerplates.
 source $HOME/.local/opt/gibo/gibo-completion.zsh
 
-# ZSH syntax highlighting
-source $HOME/.local/opt/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-
-setopt HIST_IGNORE_ALL_DUPS
-
 # Use solarized colors from sigurdga/ls-colors-solarized
 eval `dircolors /home/barraponto/.local/opt/ls-colors-solarized/dircolors`
 
-# Get the keychain running.
-eval `keychain --eval --agents ssh id_rsa --quiet`
-
 # run taskwarrior on every shell
-task
+# task
