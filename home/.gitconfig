@@ -11,6 +11,7 @@
   nb = checkout -b
   newbranch = checkout -b
   amend = commit --amend
+  cz = !npx git-cz
 [color]
   ui = auto
 [core]
