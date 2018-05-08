@@ -6,6 +6,9 @@ export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 # Start zim
 [[ -s ${ZIM_HOME}/init.zsh ]] && source ${ZIM_HOME}/init.zsh# Path to your oh-my-zsh configuration.
 
+# let sudo use the aliases (https://wiki.archlinux.org/index.php/Sudo#Passing_aliases)
+alias sudo='sudo '
+
 # Aliases
 alias zshconfig="vim -p ~/.zshrc ~/.zimrc"
 alias sshconfig="vim ~/.ssh/config"
@@ -15,21 +18,18 @@ alias ssh-add='ssh-add -t 1h'
 alias to-clipboard='xclip -selection c'
 alias be='bundle exec'
 
+# systemd aliases for common commands
+systemd_commands=(
+  daemon-reload disable enable halt hibernate hybrid-sleep
+  poweroff reboot status start stop suspend reload restart)
+for command in $systemd_commands; do; alias sc-$command="systemctl $command"; done
+
 # HISTIGNORE aliases
 alias jrnl=' jrnl'
 alias vault=' vault'
 alias pass=' pass'
 
-tabexpand () { # depends on coreutils expand
-  expand -t2 $1 > /tmp/tabexpand; mv /tmp/tabexpand $1;
-}
-
-utf8it () {
-  ftfy -e ${2-utf8} $1 > /tmp/utf8it && mv /tmp/utf8it $1;
-}
-
 # Path extensions
-export PATH=$HOME/.cabal/bin:$PATH # Local Cabal packages executables
 export PATH=$HOME/.composer/vendor/bin:$PATH # Composer (PHP) executables
 export PATH=$HOME/.rvm/bin:$PATH # RVM scripts and wrappers
 export PATH=$HOME/.config/yarn/global/node_modules/.bin:$PATH # My local packages
@@ -47,14 +47,26 @@ export ANSIBLE_COW_SELECTION=satanic # Ready satanic cow template
 export MOST_INITFILE=/usr/share/doc/most/lesskeys.rc # use less keys in most
 export PAGER=most # uses most as pager by default
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# plugins=(cp rsync systemd)
-
 # Gibo: gitignore boilerplates from simonwhitaker/gitignore-boilerplates.
 source $HOME/.local/opt/gibo/gibo-completion.zsh
 
 # Use solarized colors from sigurdga/ls-colors-solarized
 eval `dircolors /home/barraponto/.local/opt/ls-colors-solarized/dircolors`
+
+# custom functions
+
+tabexpand () { # tabs to spaces. depends on coreutils expand.
+  expand -t2 $1 > /tmp/tabexpand; mv /tmp/tabexpand $1;
+}
+
+utf8it () { # ensures the text file is utf8.
+  ftfy -e ${2-utf8} $1 > /tmp/utf8it && mv /tmp/utf8it $1;
+}
+
+safecopy() { # uses rsync for safe progress-enabled copies
+    rsync -pogbr -hhh --backup-dir=/tmp/rsync -e /dev/null --progress "$@"
+}
+compdef _files safecopy
 
 # run taskwarrior on every shell
 # task
