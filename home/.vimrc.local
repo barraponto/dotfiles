@@ -23,7 +23,13 @@ let g:vimroom_sidebar_height=0          " vimroom: no vertical padding
 " Increase indenting for javascript and python
 autocmd FileType python setlocal sw=4 ts=4 sts=4
 let g:pymode_rope=0 " Don't need this right now.
+
+" set vue component filetypes
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
+
+" set default linters
 let g:syntastic_javascript_checkers=["eslint"] " eslint > jshint
+let g:syntastic_css_checkers=["stylelint"] " stylelint > csslint
 
 " Fixes issues with terminal vim
 set clipboard=
