@@ -47,9 +47,6 @@ export ANSIBLE_COW_SELECTION=satanic # Ready satanic cow template
 export MOST_INITFILE=/usr/share/doc/most/lesskeys.rc # use less keys in most
 export PAGER=most # uses most as pager by default
 
-# Gibo: gitignore boilerplates from simonwhitaker/gitignore-boilerplates.
-source $HOME/.local/opt/gibo/gibo-completion.zsh
-
 # Use solarized colors from sigurdga/ls-colors-solarized
 eval `dircolors /home/barraponto/.local/opt/ls-colors-solarized/dircolors`
 
