@@ -2,3 +2,4 @@
 .drush
 .local/opt
 .config/mpv
+.atom
