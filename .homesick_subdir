@@ -3,3 +3,4 @@
 .local/opt
 .config/mpv
 .atom
+.config/qterminal.org
