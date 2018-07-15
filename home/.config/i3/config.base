@@ -5,6 +5,9 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+# fix i3status-rust configuration
+
+
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
@@ -13,7 +16,8 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
-font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+font pango:FuraMono Nerd Font 10
 # The font above is very space-efficient, that is, it looks good, sharp and
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
@@ -35,7 +39,11 @@ bindsym $mod+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
+bindsym $mod+d exec --no-startup-id "rofi -show drun"
+bindsym $mod+Tab exec --no-startup-id "rofi -show window"
+bindsym $mod+Shift+p exec --no-startup-id "rofi-pass"
+bindsym $mod+Shift+v exec --no-startup-id "roficlip"
+bindsym $mod+Shift+m exec --no-startup-id "clerk -a"
 
 # change focus
 # bindsym $mod+j focus left
@@ -117,7 +125,6 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-# bindsym $mod+Shift+e exec "gnome-session-quit --logout"
 # lock i3 session
 bindsym $mod+Shift+l exec --no-startup-id i3lock
 
@@ -148,7 +155,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 bar {
-  status_command i3blocks
+  status_command i3status-rs ~/.config/i3status-rust/config.toml
+  font pango:mononoki Nerd Font 12
   # $i3-theme-bar
 }
 
@@ -170,6 +178,7 @@ exec --no-startup-id compton -b
 # enable natural scrolling
 exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Scrolling Distance" -101, -101
 
+exec --no-startup-id clipster --daemon
 exec --no-startup-id udiskie --tray
 exec --no-startup-id nm-applet
 exec --no-startup-id redshift-gtk
@@ -178,6 +187,10 @@ exec --no-startup-id sh ~/.fehbg &
 # Set steam dialogs to float (from https://github.com/ValveSoftware/steam-for-linux/issues/597)
 for_window [class="Steam"] floating enable
 for_window [class="Steam" title="^Steam$"] floating disable
+
+# Set qterminal settings size
+for_window [class="qterminal" title="^Terminal settings$"] resize set 80 ppt 60 ppt
+for_window [class="qterminal" title="^Terminal settings$"] move absolute position center
 
 # don't steal focus (https://i3wm.org/docs/userguide.html)
 focus_on_window_activation urgent
