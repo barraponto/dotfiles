@@ -1,10 +1,10 @@
 ### https://raw.github.com/github/gitignore/master/Global/vim.gitignore
 
+home/.config/i3/config
 [._]*.s[a-w][a-z]
 [._]s[a-w][a-z]
 *.un~
 Session.vim
 .netrwhist
 *~
-
 
