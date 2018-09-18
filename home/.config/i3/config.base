@@ -163,10 +163,11 @@ bar {
 # Lenovo Thinkpad T530 Keymaps
 bindsym XF86MonBrightnessUp   exec --no-startup-id xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
-bindsym XF86AudioMute         exec --no-startup-id pamixer --toggle-mute && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioPlay         exec --no-startup-id mpc toggle
+bindsym XF86AudioMute         exec --no-startup-id pamixer --toggle-mute
 bindysm XF86AudioMicMute      exec --no-startup-id pactl set-source-mute 1 toggle #does not work
-bindsym XF86AudioRaiseVolume  exec --no-startup-id pamixer --increase 5 && pkill -RTMIN+10 i3blocks
-bindsym XF86AudioLowerVolume  exec --no-startup-id pamixer --decrease 5 && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioRaiseVolume  exec --no-startup-id pamixer --increase 5
+bindsym XF86AudioLowerVolume  exec --no-startup-id pamixer --decrease 5
 bindsym --release Print       exec copy-window
 bindsym --release Shift+Print exec save-window
 
@@ -181,7 +182,7 @@ exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Scr
 exec --no-startup-id clipster --daemon
 exec --no-startup-id udiskie --tray
 exec --no-startup-id nm-applet
-exec --no-startup-id redshift-gtk
+exec --no-startup-id redshift-qt
 exec --no-startup-id sh ~/.fehbg &
 
 # Set steam dialogs to float (from https://github.com/ValveSoftware/steam-for-linux/issues/597)
