@@ -1,12 +1,6 @@
 icons = "awesome"
 
 [[block]]
-block ="music"
-player = "mpd"
-buttons = ["play", "next"]
-max_width = 36
-
-[[block]]
 block = "disk_space"
 path = "/"
 alias = "/"
