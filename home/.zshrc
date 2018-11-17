@@ -6,6 +6,9 @@ eval "$(pyenv init -)" # Load pyenv
 [[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"  # Load NVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM
 
+# set up z
+[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+
 # let sudo use the aliases (https://wiki.archlinux.org/index.php/Sudo#Passing_aliases)
 alias sudo='sudo '
 
