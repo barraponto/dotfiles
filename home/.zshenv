@@ -1,3 +1,8 @@
+# XDG defaults just in case
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+
 # Application home folders
 export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 export NVM_DIR=$HOME/.nvm # nvm
@@ -17,7 +22,7 @@ export PYTHONDOCS=/usr/share/doc/python2/html/ # Needed for the python2-docs pac
 export HISTIGNORE='pwd:exit:clear:jrnl:vault:pass:[ \t]*' # bash-specific
 export LESSOPEN='| /usr/bin/src-hilite-lesspipe.sh %s' # syntax-highlight files
 export LESS=' -R ' # allow color escape sequences
-export WINEARCH=win32 # should avoid some issues
+#export WINEARCH=win32 # should avoid some issues
 export ANSIBLE_COW_SELECTION=satanic # Ready satanic cow template
 export MOST_INITFILE=/usr/share/doc/most/lesskeys.rc # use less keys in most
 export PAGER=most # uses most as pager by default
