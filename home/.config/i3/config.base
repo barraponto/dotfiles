@@ -29,7 +29,7 @@ floating_modifier $mod
 
 # start a terminal
 # bindsym $mod+Return exec st -f "Fira Code:style=Regular:size=16"
-bindsym $mod+Return exec qterminal
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -194,4 +194,4 @@ for_window [class="qterminal" title="^Terminal settings$"] resize set 80 ppt 60 
 for_window [class="qterminal" title="^Terminal settings$"] move absolute position center
 
 # don't steal focus (https://i3wm.org/docs/userguide.html)
-focus_on_window_activation urgent
+focus_on_window_activation smart
