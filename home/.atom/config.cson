@@ -11,13 +11,18 @@
       "node_modules"
     ]
     telemetryConsent: "no"
+    themes: [
+      "one-light-ui"
+      "solarized-light-syntax"
+    ]
   editor:
-    fontFamily: "FuraCode Nerd Font, Menlo, Consolas, DejaVu Sans Mono, monospace"
+    fontFamily: "Fira Code, Menlo, Consolas, DejaVu Sans Mono, monospace"
     fontSize: 16
   "exception-reporting":
     userId: "cedfe6a7-a232-4daa-b028-c31e3c473d2b"
   "linter-eslint":
-    fixOnSave: true
+    autofix:
+      fixOnSave: true
   "prettier-atom":
     formatOnSaveOptions:
       enabled: true
@@ -28,5 +33,7 @@
       bracketSpacing: false
       semi: false
     useEditorConfig: false
+  "tree-view":
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
