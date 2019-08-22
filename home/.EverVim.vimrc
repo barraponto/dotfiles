@@ -12,15 +12,14 @@
     " Bundle Group name is just folders under ~/.EverVim/plugins
     " Below is the default config, uncomment and make your own
     let g:evervim_bundle_groups=[
-                \'general', 'appearance', 'writing', 'youcompleteme', 'java',
-                \'programming', 'python', 'javascript', 'html', 'css', 'misc',
-                \'bash']
+        \'general', 'appearance', 'writing', 'youcompleteme', 'programming',
+        \'java', 'php', 'rust', 'python', 'javascript', 'html', 'css', 'misc', 'bash']
 
     " Color Theme
     " Use :Colors for a list of available colorschemes
     let g:evervim_color_theme="solarized"
     let g:evervim_airline_theme="solarized"
-    let g:evervim_light_background = 1
+    " let g:evervim_light_background = 1
 
     " Customize Patched Font
     " Pick one at https://github.com/ryanoasis/nerd-fonts
@@ -36,7 +35,7 @@
     " adding/removing a whole bundle
     " Simply uncomment the following line and add remove plugins in the
     " ~/.EverVim.bundles file using `Plug` and `UnPlug` commands
-    "   let g:override_evervim_bundles = 1
+    let g:override_evervim_bundles = 1
     "
     " in ~/.EverVim.bundles,
     "   Plug 'Someone/AwesomePlugin'
@@ -165,5 +164,14 @@
     " Mappings for editing/applying evervim config
     "   let g:evervim_edit_config_mapping='<leader>ec'
     "   let g:evervim_apply_config_mapping='<leader>ac'
+
+    " Disable python-mode auto indenting
+    let g:pymode_indent = 0
+
+    " Set soft tab width to 2 spaces for javascript files
+    autocmd FileType javascript setlocal ts=2 sts=2 sw=2
+
+    let g:ale_php_phpcs_standard = 'Drupal'
+
 " }
 
