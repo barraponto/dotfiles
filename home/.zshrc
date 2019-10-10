@@ -13,10 +13,11 @@ eval "$(pyenv init -)" # Load pyenv
 alias sudo='sudo '
 
 # Aliases
-alias zshconfig='vim -p ~/.zshrc ~/.zshenv ~/.zimrc'
-alias sshconfig='vim ~/.ssh/config'
-alias vimconfig='vim -p ~/.EverVim.vimrc ~/.EverVim.bundles ~/.vimrc.before.local'
-alias i3config='vim -p ~/.config/i3/config.base ~/.config/i3status-rust/config.toml'
+alias vim=nvim
+alias zshconfig='nvim -p ~/.zshrc ~/.zshenv ~/.zimrc'
+alias sshconfig='nvim ~/.ssh/config'
+alias vimconfig='nvim -p ~/.SpaceVim.d/init.toml ~/.SpaceVim.d/'
+alias i3config='nvim -p ~/.config/i3/config.base ~/.config/i3status-rust/config.toml'
 alias ssh-add='ssh-add -t 1h'
 alias to-clipboard='xclip -selection c'
 alias be='bundle exec'
@@ -29,7 +30,7 @@ for command in $systemd_commands; do; alias sc-$command="systemctl $command"; do
 
 # HISTIGNORE aliases
 alias jrnl=' jrnl'
-alias vault=' clipster --clipboard --ignore && vault'
+alias vault=' vault'
 alias pass=' pass'
 
 # Use solarized colors from sigurdga/ls-colors-solarized
