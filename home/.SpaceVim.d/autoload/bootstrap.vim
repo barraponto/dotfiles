@@ -7,8 +7,10 @@ function! bootstrap#after() abort
         \ 'cwd': '%:p:h',
         \ 'output_stream': 'stdout',
         \ }
-
   let g:neomake_javascript_jsx_enabled_makers = ['eslint']
-
   let g:neoformat_enabled_javascript = ['npxprettier']
+
+  let g:neomake_php_enabled_makers = ['phpcs']
+  let g:neomake_php_phpcs_args_standard = 'Drupal,DrupalPractice'
+  let g:neoformat_enabled_php = ['drupalphpcbf']
 endfunction
