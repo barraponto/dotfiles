@@ -11,7 +11,7 @@ export M_PREFIX=$HOME/.local
 
 # Path extensions
 export PATH=$HOME/.local/bin:$PATH # My local packages
-export PATH=$HOME/.composer/vendor/bin:$PATH # Composer (PHP) executables
+export PATH=$HOME/.config/composer/vendor/bin:$PATH # Composer (PHP) executables
 export PATH=$PYENV_ROOT/bin:$PATH # pyenv binaries
 export PATH=$HOME/.rvm/bin:$PATH # RVM scripts and wrappers
 
@@ -27,3 +27,7 @@ export ANSIBLE_COW_SELECTION=satanic # Ready satanic cow template
 export MOST_INITFILE=/usr/share/doc/most/lesskeys.rc # use less keys in most
 export PAGER=most # uses most as pager by default
 export QT_STYLE_OVERRIDE=adwaita # uses adwaita for qt5 applications
+export GTAGSLABEL=pygments
+
+export PYTHON3_HOST_PROG=$HOME/.pyenv/versions/nvim/bin/python
+export FZF_DEFAULT_COMMAND='rg --files --hidden'
