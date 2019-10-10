@@ -6,13 +6,11 @@ export XDG_DATA_HOME=$HOME/.local/share
 # Application home folders
 export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 export NVM_DIR=$HOME/.nvm # nvm
-export PYENV_ROOT=$HOME/.pyenv # pyenv
 export M_PREFIX=$HOME/.local
 
 # Path extensions
 export PATH=$HOME/.local/bin:$PATH # My local packages
 export PATH=$HOME/.config/composer/vendor/bin:$PATH # Composer (PHP) executables
-export PATH=$PYENV_ROOT/bin:$PATH # pyenv binaries
 export PATH=$HOME/.rvm/bin:$PATH # RVM scripts and wrappers
 
 # Other exports
@@ -29,5 +27,6 @@ export PAGER=most # uses most as pager by default
 export QT_STYLE_OVERRIDE=adwaita # uses adwaita for qt5 applications
 export GTAGSLABEL=pygments
 
-export PYTHON3_HOST_PROG=$HOME/.pyenv/versions/nvim/bin/python
+export PYTHON2_HOST_PROG=$HOME/.local/share/virtualenvs/nvim2/bin/python2
+export PYTHON3_HOST_PROG=$HOME/.local/share/virtualenvs/nvim/bin/python3
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
