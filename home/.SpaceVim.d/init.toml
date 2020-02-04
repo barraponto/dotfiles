@@ -40,6 +40,9 @@ name = 'fzf'
 name = 'git'
 
 [[layers]]
+name = 'github'
+
+[[layers]]
 name = 'lang#html'
 
 [[layers]]
