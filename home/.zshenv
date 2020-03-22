@@ -30,3 +30,5 @@ export GTAGSLABEL=pygments
 export PYTHON2_HOST_PROG=$HOME/.local/share/virtualenvs/nvim2/bin/python2
 export PYTHON3_HOST_PROG=$HOME/.local/share/virtualenvs/nvim/bin/python3
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
+
+export MOZ_USE_XINPUT2=1
