@@ -16,6 +16,8 @@
   back = "!git stash apply $(git stash list | grep '$1' | cut -d: -f1); #"
 [color]
   ui = auto
+[commit]
+  gpgsign = true
 [core]
   excludesfile = ~/.gitignore
   pager = delta
@@ -30,6 +32,8 @@
   colorMoved = default
 [github]
   user = barraponto
+[gpg]
+  program = gpg
 [help]
   autocorrect = 20
 [interactive]
@@ -53,3 +57,4 @@
   insteadOf = drupalsand://
 # [http]
 # proxy = http://localhost:1234
+	signingkey = 759F25E8F0AAE9D1
