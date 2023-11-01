@@ -21,8 +21,6 @@
 [core]
   excludesfile = ~/.gitignore
   pager = delta
-# gitproxy at https://gist.github.com/2d25bf3ab13b6ac3bdbf
-# gitproxy = gitproxy
 [delta]
   hyperlinks = true
   line-numbers = true
@@ -36,12 +34,10 @@
   program = gpg
 [help]
   autocorrect = 20
+[init]
+  defaultBranch = main
 [interactive]
   diffFilter = delta --color-only
-# [pager]
-# support https://github.com/so-fancy/diff-so-fancy
-# diff = diff-so-fancy | less --tabs=1,5 -RFX
-# show = diff-so-fancy | less --tabs=1,5 -RFX
 [merge]
   conflictstyle = diff3
 [push]
@@ -51,10 +47,4 @@
 [user]
   name = Capi Etheriel
   email = barraponto@gmail.com
-[url "http://git.drupal.org/project/"]
-  insteadOf = drupal://
-[url "http://git.drupal.org/sandbox/"]
-  insteadOf = drupalsand://
-# [http]
-# proxy = http://localhost:1234
-	signingkey = 759F25E8F0AAE9D1
+  signingkey = 759F25E8F0AAE9D1
