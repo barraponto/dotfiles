@@ -12,6 +12,8 @@
   newbranch = checkout -b
   amend = commit --amend
   cz = !npx git-cz
+  aside = "!git stash push -m $1 #"
+  back = "!git stash apply $(git stash list | grep '$1' | cut -d: -f1); #"
 [color]
   ui = auto
 [core]
