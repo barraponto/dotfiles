@@ -18,12 +18,12 @@ export EDITOR=vim
 export VIRTUAL_ENV_DISABLE_PROMPT=1 # Let Virtualenv prompt show up in the zsh theme.
 export PYTHONDOCS=/usr/share/doc/python2/html/ # Needed for the python2-docs package.
 export HISTIGNORE='pwd:exit:clear:jrnl:vault:pass:[ \t]*' # bash-specific
-export LESSOPEN='| /usr/bin/src-hilite-lesspipe.sh %s' # syntax-highlight files
-export LESS=' -R ' # allow color escape sequences
+#export LESSOPEN='| /usr/bin/src-hilite-lesspipe.sh %s' # syntax-highlight files
+#export LESS=' -R ' # allow color escape sequences
 #export WINEARCH=win32 # should avoid some issues
 export ANSIBLE_COW_SELECTION=satanic # Ready satanic cow template
-export MOST_INITFILE=/usr/share/doc/most/lesskeys.rc # use less keys in most
-export PAGER=most # uses most as pager by default
+#export MOST_INITFILE=/usr/share/doc/most/lesskeys.rc # use less keys in most
+#export PAGER=most # uses most as pager by default
 export QT_STYLE_OVERRIDE=adwaita # uses adwaita for qt5 applications
 export GTAGSLABEL=pygments
 

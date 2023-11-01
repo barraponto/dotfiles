@@ -18,12 +18,28 @@
   ui = auto
 [core]
   excludesfile = ~/.gitignore
+  pager = delta
 # gitproxy at https://gist.github.com/2d25bf3ab13b6ac3bdbf
 # gitproxy = gitproxy
+[delta]
+  hyperlinks = true
+  line-numbers = true
+  light = false
+  navigate = true
+[diff]
+  colorMoved = default
 [github]
   user = barraponto
 [help]
   autocorrect = 20
+[interactive]
+  diffFilter = delta --color-only
+# [pager]
+# support https://github.com/so-fancy/diff-so-fancy
+# diff = diff-so-fancy | less --tabs=1,5 -RFX
+# show = diff-so-fancy | less --tabs=1,5 -RFX
+[merge]
+  conflictstyle = diff3
 [push]
   default = current
 [receive]
@@ -37,7 +53,3 @@
   insteadOf = drupalsand://
 # [http]
 # proxy = http://localhost:1234
-[pager]
-  # support https://github.com/so-fancy/diff-so-fancy
-  diff = diff-so-fancy | less --tabs=1,5 -RFX
-  show = diff-so-fancy | less --tabs=1,5 -RFX
