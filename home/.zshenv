@@ -2,6 +2,7 @@
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
+export XDG_STATE_HOME=$HOME/.local/state
 
 # Application home folders
 export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
@@ -14,21 +15,14 @@ export PATH=$HOME/.config/composer/vendor/bin:$PATH # Composer (PHP) executables
 export PATH=$HOME/.rvm/bin:$PATH # RVM scripts and wrappers
 
 # Other exports
-export EDITOR=vim
+export EDITOR=nvim
 export VIRTUAL_ENV_DISABLE_PROMPT=1 # Let Virtualenv prompt show up in the zsh theme.
-export PYTHONDOCS=/usr/share/doc/python2/html/ # Needed for the python2-docs package.
-export HISTIGNORE='pwd:exit:clear:jrnl:vault:pass:[ \t]*' # bash-specific
-#export LESSOPEN='| /usr/bin/src-hilite-lesspipe.sh %s' # syntax-highlight files
-#export LESS=' -R ' # allow color escape sequences
-#export WINEARCH=win32 # should avoid some issues
+export HISTFILE=$HOME/.zsh_history
+export HISTIGNORE='pwd:exit:clear:jrnl:vault:pass:gopass:[ \t]*' # bash-specific
 export ANSIBLE_COW_SELECTION=satanic # Ready satanic cow template
-#export MOST_INITFILE=/usr/share/doc/most/lesskeys.rc # use less keys in most
-#export PAGER=most # uses most as pager by default
 export QT_STYLE_OVERRIDE=adwaita # uses adwaita for qt5 applications
 export GTAGSLABEL=pygments
-
-export PYTHON2_HOST_PROG=$HOME/.local/share/virtualenvs/nvim2/bin/python2
-export PYTHON3_HOST_PROG=$HOME/.local/share/virtualenvs/nvim/bin/python3
+export PYTHON3_HOST_PROG=/usr/bin/python3
 export FZF_DEFAULT_COMMAND='rg --files --hidden'
-
-export MOZ_USE_XINPUT2=1
+#export MOZ_USE_XINPUT2=1 # linux touchpad support
+export LIBVA_DRIVER_NAME=nvidia

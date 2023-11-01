@@ -1,12 +1,15 @@
 # Start configuration added by Zim install {{{
+#
+# This is not sourced during shell startup, and it's only used to configure the
+# zimfw plugin manager.
+#
+
 # -------
 # Modules
 # -------
 
 # Sets sane Zsh built-in environment options.
 zmodule environment
-# Provides handy git aliases and functions.
-zmodule git
 # Applies correct bindkeys for input events.
 zmodule input
 # Sets a custom terminal title.
@@ -14,16 +17,9 @@ zmodule termtitle
 # Utility aliases and functions. Adds colour to ls, grep and less.
 zmodule utility
 
-#
-# Prompt
-#
-# Exposes git repository status information to prompts.
-zmodule git-info
-# A customizable version of steeef's prompt theme.
-zmodule steeef
 
 # Additional completion definitions for Zsh.
-zmodule zsh-users/zsh-completions
+zmodule zsh-users/zsh-completions --fpath src
 # Enables and configures smart and extensive tab completion.
 # completion must be sourced after zsh-users/zsh-completions
 zmodule completion
@@ -38,3 +34,9 @@ zmodule zsh-users/zsh-history-substring-search
 # }}} End configuration added by Zim install
 
 zmodule pacman
+
+zmodule joke/zim-github-cli
+zmodule joke/zim-starship
+zmodule joke/zim-rtx
+zmodule kiesman99/zim-zoxide
+zmodule zimfw/fzf

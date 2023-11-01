@@ -74,7 +74,8 @@ WORDCHARS=${WORDCHARS//[\/]}
 
 # Customize the style that the suggestions are shown with.
 # See https://github.com/zsh-users/zsh-autosuggestions/blob/master/README.md#suggestion-highlight-style
-#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10,underline'
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 #
 # zsh-syntax-highlighting
@@ -133,8 +134,10 @@ bindkey -M vicmd 'j' history-substring-search-down
 [[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"  # Load NVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM
 
-# set up z
-[[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
+# setup redo
+source $(redo alias-file)
+# setup broot
+source /home/barraponto/.config/broot/launcher/bash/br
 
 # let sudo use the aliases (https://wiki.archlinux.org/index.php/Sudo#Passing_aliases)
 alias sudo='sudo '
@@ -149,6 +152,21 @@ alias ssh-add='ssh-add -t 1h'
 alias to-clipboard='xclip -selection c'
 alias be='bundle exec'
 
+# Modern best friends
+alias cat=bat
+alias df=duf
+alias diff=batdiff
+alias du=dust
+alias dtrx='ouch decompress'
+alias find=fd
+alias grep=rg
+alias ls=exa
+alias man=batman
+alias pass=gopass
+alias sed=sd
+alias tree=broot
+alias youtube-dl=yt-dlp
+
 # systemd aliases for common commands
 systemd_commands=(
   daemon-reload disable enable halt hibernate hybrid-sleep
@@ -158,10 +176,8 @@ for command in $systemd_commands; do; alias sc-$command="systemctl $command"; do
 # HISTIGNORE aliases
 alias jrnl=' jrnl'
 alias vault=' vault'
-alias pass=' pass'
+alias pass=' gopass'
 
-# Use solarized colors from sigurdga/ls-colors-solarized
-eval `dircolors /home/barraponto/.local/opt/ls-colors-solarized/dircolors`
 
 # custom functions
 
@@ -176,7 +192,8 @@ utf8it () { # ensures the text file is utf8.
 safecopy() { # uses rsync for safe progress-enabled copies
     rsync -pogbr -hhh --backup-dir=/tmp/rsync -e /dev/null --progress "$@"
 }
-#compdef _files safecopy
+compdef _files safecopy
 
 # run taskwarrior on every shell
 # task
+
