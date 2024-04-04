@@ -35,8 +35,8 @@ zmodule zsh-users/zsh-history-substring-search
 
 zmodule pacman
 
+zmodule joke/zim-mise
 zmodule joke/zim-github-cli
 zmodule joke/zim-starship
-zmodule joke/zim-rtx
 zmodule kiesman99/zim-zoxide
 zmodule zimfw/fzf
