@@ -93,7 +93,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 #
 # pacman
 #
-zstyle ':zim:pacman' frontend 'bb-wrapper'
+zstyle ':zim:pacman' frontend 'pikaur'
 
 # ------------------
 # Initialize modules
