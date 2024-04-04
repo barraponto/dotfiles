@@ -177,6 +177,7 @@ for command in $systemd_commands; do; alias sc-$command="systemctl $command"; do
 alias jrnl=' jrnl'
 alias vault=' vault'
 alias pass=' gopass'
+alias gopass=' gopass'
 
 
 # custom functions
