@@ -11,6 +11,11 @@
   nb = checkout -b
   newbranch = checkout -b
   amend = commit --amend
+  whatchanged = diff --name-only
+  # pickaxe
+  find-code = log -p -S
+  find-commit = log --all --grep
+  # stash show = stash show -p
   cz = !npx git-cz
   aside = "!git stash push -m $1 #"
   back = "!git stash apply $(git stash list | grep '$1' | cut -d: -f1); #"
@@ -24,8 +29,8 @@
 [delta]
   hyperlinks = true
   line-numbers = true
-  light = false
   navigate = true
+  light = false
 [diff]
   colorMoved = default
 [github]
@@ -39,7 +44,8 @@
 [interactive]
   diffFilter = delta --color-only
 [merge]
-  conflictstyle = diff3
+  # https://ductile.systems/zdiff3/
+  conflictStyle = zdiff3
 [push]
   default = current
 [receive]
@@ -48,3 +54,5 @@
   name = Capi Etheriel
   email = barraponto@gmail.com
   signingkey = 759F25E8F0AAE9D1
+[rerere]
+  enabled = true

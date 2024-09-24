@@ -1,5 +1,13 @@
-# User configuration sourced by interactive shells
+###################
+#   trace start   #
+###################
+# PS4=$'%D{%s%7.}-_-'
+# exec 3>&2 2>/tmp/sample-time.$$.log
+# zmodload zsh/zprof
+# setopt xtrace prompt_subst
 
+
+# User configuration sourced by interactive shells
 # Start configuration added by Zim install {{{
 #
 # User configuration sourced by interactive shells
@@ -32,18 +40,16 @@ bindkey -e
 # Remove path separator from WORDCHARS.
 WORDCHARS=${WORDCHARS//[\/]}
 
+ # -----------------
+ # Zim configuration
+ # -----------------
+
+ # Use degit instead of git as the default tool to install and update modules.
+ zstyle ':zim:zmodule' use 'degit'
 
 # --------------------
 # Module configuration
 # --------------------
-
-#
-# completion
-#
-
-# Set a custom path for the completion dump file.
-# If none is provided, the default ${ZDOTDIR:-${HOME}}/.zcompdump is used.
-#zstyle ':zim:completion' dumpfile "${ZDOTDIR:-${HOME}}/.zcompdump-${ZSH_VERSION}"
 
 #
 # git
@@ -72,8 +78,13 @@ WORDCHARS=${WORDCHARS//[\/]}
 # zsh-autosuggestions
 #
 
+# Disable automatic widget re-binding on each precmd. This can be set when
+# zsh-users/zsh-autosuggestions is the last module in your ~/.zimrc.
+ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+
 # Customize the style that the suggestions are shown with.
 # See https://github.com/zsh-users/zsh-autosuggestions/blob/master/README.md#suggestion-highlight-style
+#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10,underline'
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
@@ -93,16 +104,30 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 #
 # pacman
 #
+
+# set pikaur as the default frontend for pacman
 zstyle ':zim:pacman' frontend 'pikaur'
 
 # ------------------
 # Initialize modules
 # ------------------
 
-if [[ ${ZIM_HOME}/init.zsh -ot ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
-  # Update static initialization script if it's outdated, before sourcing it
+ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
+# Download zimfw plugin manager if missing.
+if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
+  if (( ${+commands[curl]} )); then
+    curl -fsSL --create-dirs -o ${ZIM_HOME}/zimfw.zsh \
+        https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
+  else
+    mkdir -p ${ZIM_HOME} && wget -nv -O ${ZIM_HOME}/zimfw.zsh \
+        https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
+  fi
+fi
+# Install missing modules, and update ${ZIM_HOME}/init.zsh if missing or outdated.
+if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
   source ${ZIM_HOME}/zimfw.zsh init -q
 fi
+# Initialize modules.
 source ${ZIM_HOME}/init.zsh
 
 # ------------------------------
@@ -113,31 +138,20 @@ source ${ZIM_HOME}/init.zsh
 # zsh-history-substring-search
 #
 
-# Bind ^[[A/^[[B manually so up/down works both before and after zle-line-init
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-
-# Bind up and down keys
 zmodload -F zsh/terminfo +p:terminfo
-if [[ -n ${terminfo[kcuu1]} && -n ${terminfo[kcud1]} ]]; then
-  bindkey ${terminfo[kcuu1]} history-substring-search-up
-  bindkey ${terminfo[kcud1]} history-substring-search-down
-fi
-
-bindkey '^P' history-substring-search-up
-bindkey '^N' history-substring-search-down
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'j' history-substring-search-down
+# Bind ^[[A/^[[B manually so up/down works both before and after zle-line-init
+for key ('^[[A' '^P' ${terminfo[kcuu1]}) bindkey ${key} history-substring-search-up
+for key ('^[[B' '^N' ${terminfo[kcud1]}) bindkey ${key} history-substring-search-down
+for key ('k') bindkey -M vicmd ${key} history-substring-search-up
+for key ('j') bindkey -M vicmd ${key} history-substring-search-down
+unset key
 # }}} End configuration added by Zim install
 
-
-[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"  # Load NVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM
 
 # setup redo
 source $(redo alias-file)
 # setup broot
-source /home/barraponto/.config/broot/launcher/bash/br
+source ~/.config/broot/launcher/bash/br
 
 # let sudo use the aliases (https://wiki.archlinux.org/index.php/Sudo#Passing_aliases)
 alias sudo='sudo '
@@ -149,7 +163,7 @@ alias sshconfig='nvim ~/.ssh/config'
 alias vimconfig='nvim -p ~/.SpaceVim.d/init.toml ~/.SpaceVim.d/'
 alias i3config='nvim -p ~/.config/i3/config.base ~/.config/i3status-rust/config.toml'
 alias ssh-add='ssh-add -t 1h'
-alias to-clipboard='xclip -selection c'
+alias to-clipboard='pbcopy'
 alias be='bundle exec'
 
 # Modern best friends
@@ -168,10 +182,10 @@ alias tree=broot
 alias youtube-dl=yt-dlp
 
 # systemd aliases for common commands
-systemd_commands=(
-  daemon-reload disable enable halt hibernate hybrid-sleep
-  poweroff reboot status start stop suspend reload restart)
-for command in $systemd_commands; do; alias sc-$command="systemctl $command"; done
+# systemd_commands=(
+#   daemon-reload disable enable halt hibernate hybrid-sleep
+#   poweroff reboot status start stop suspend reload restart)
+# for command in $systemd_commands; do; alias sc-$command="systemctl $command"; done
 
 # HISTIGNORE aliases
 alias jrnl=' jrnl'
@@ -179,10 +193,10 @@ alias vault=' vault'
 alias pass=' gopass'
 alias gopass=' gopass'
 
-
 # custom functions
 
 tabexpand () { # tabs to spaces. depends on coreutils expand.
+
   expand -t2 $1 > /tmp/tabexpand; mv /tmp/tabexpand $1;
 }
 
@@ -197,4 +211,19 @@ compdef _files safecopy
 
 # run taskwarrior on every shell
 # task
+
+#################
+#   trace end   #
+#################
+# unsetopt xtrace
+# zprof >! /tmp/zprof
+# local line last
+# while IFS= read -r line; do
+#   if [[ ${line} =~ '^[0-9]+-_-' ]]; then
+#     if [[ -n ${last} ]]; then
+#       printf "%.6f %s\n" $(( (${line%%-_-*} - ${last%%-_-*}) / (10.0 ** 6) )) ${last#*-_-}
+#     fi
+#     last=${line}
+#   fi
+# done < /tmp/sample-time.(*).log > /tmp/ztrace.log
 
