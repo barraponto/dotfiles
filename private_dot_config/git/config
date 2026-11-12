@@ -1,0 +1,69 @@
+[alias]
+  co = checkout
+  ci = commit
+  br = branch
+  st = status --short
+  ff = merge --ff-only
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  changelog = log --pretty=format:\" * %s\"
+  sg = diff --staged
+  staged = diff --staged
+  nb = checkout -b
+  newbranch = checkout -b
+  amend = commit --amend
+  whatchanged = diff --name-only
+  # pickaxe
+  find-code = log -p -S
+  find-commit = log --all --grep
+  # stash show = stash show -p
+  aside = "!git stash push -m $1 #"
+  back = "!git stash apply $(git stash list | grep '$1' | cut -d: -f1); #"
+[color]
+  ui = auto
+[commit]
+  gpgsign = true
+[core]
+  excludesfile = ~/.config/git/ignore
+  pager = delta --pager='ov --quit-if-one-screen'
+[delta]
+  hyperlinks = true
+  line-numbers = true
+  navigate = true
+  side-by-side = true
+  light = false
+[delta "ov-diff"]
+  pager = ov --quit-if-one-screen --section-delimiter '^(commit|added:|removed:|renamed:|Δ)' --section-header --pattern '•'
+[delta "ov-log"]
+  pager = ov --quit-if-one-screen --section-delimiter '^commit' --section-header-num 3
+[diff]
+  colorMoved = default
+[github]
+  user = barraponto
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  allowedSignersFile = ~/.ssh/allowed_signers
+[help]
+  autocorrect = 20
+[init]
+  defaultBranch = main
+[interactive]
+  diffFilter = delta --color-only
+[merge]
+  # https://ductile.systems/zdiff3/
+  conflictStyle = zdiff3
+[pager]
+  show = delta --pager='ov --quit-if-one-screen --header 3'
+  diff = delta --features ov-diff
+  log = delta --features ov-log
+[push]
+  default = current
+[receive]
+  denyNonFastForwards = true
+[user]
+  name = Capi Huamani
+  email = barraponto@gmail.com
+  signingKey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH/t/gNLK+BUP1PilDXPnHumUKcQS6uMgcoQpBvR3H+U harpo
+[rerere]
+  enabled = true
+
